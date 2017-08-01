@@ -30,6 +30,7 @@ Thumbs.db
 .hg
 .idea
 .svn
+build
 
 # Node.JS
 node_modules
