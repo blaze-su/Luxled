@@ -1,0 +1,58 @@
+block header
+    header.header
+        .header__topLine
+            .totalWidth
+                .header__shopInfo
+                    p.header__shopCity г. Краснодар
+                    p.header__shopPhone 8 928 215-18-18
+                    p.header__shopMode Пн-Пт с 09:00 до 18:00
+                -
+                    var menuItem = [
+                        {title: 'О нас', link: '#'},
+                        {title: 'Доставка и оплата', link: '#'},
+                        {title: 'Партнёрам', link: '#'},
+                        {title: 'Контакты', link: '#'}
+                    ]
+                ul.header__navigation
+                    each i in menuItem
+                        li.header__navigationItem
+                            a(href= i.link).header__navigationLink= i.title
+
+        .header__mainContent
+            .totalWidth
+                .logo
+                    img.logo__pic(src="assets/img/logo.png", alt="logo")
+                    p.logo__caption Светодиодное освещение
+
+                button.header__catalogBtn Каталог
+                    +svgMix('header__catalogBtnPic', 'list')
+
+                .search
+                    +svgMix('search__pic', 'magnifying-glass')
+                    input(type="text" placeholder="Поиск по каталогу").search__field
+                
+                a(href="#").cart
+                    +svgMix('cart__pic', 'shopping-cart')
+                    p.cart__title Корзина
+                    span.cart__number пока пуста
+
+        .header__catalogBox
+            .totalWidth
+                -
+                    var catalogItem = [
+                        {title: 'Светодиодные ленты', imgName: '1.jpg'},
+                        {title: 'Источники питания', imgName: '2.jpeg'},
+                        {title: 'Управлениее светом', imgName: '3.jpeg'},
+                        {title: 'Алюминевый профиль', imgName: '4.jpeg'},
+                        {title: 'Светодиодные светильники', imgName: '5.jpeg'},
+                        {title: 'Светодиодные лампы', imgName: '6.jpeg'},
+                        {title: 'Модули и линейки', imgName: '7.jpg'},
+                        {title: 'Светодиодный декор', imgName: '8.jpg'},
+                        {title: 'Светодиоды', imgName: '9.jpeg'} ]
+                ul.header__catalog
+                    each i in catalogItem
+                        li.header__catalogItem
+                            a(href="#").header__catalogLink
+                                .header__catalogItemPicBox
+                                    img(src= 'assets/img/header__catalog/'+i.imgName, alt="?").header__catalogItemPic
+                                p.header__catalogItemName= i.title

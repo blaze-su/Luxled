@@ -1,0 +1,13 @@
+{
+  "name": "m.kolendyuk",
+  "version": "1.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "reset-css": "^2.2.1",
+    "normalize-css": "^7.0.0"
+  }
+}

@@ -1,0 +1,57 @@
+@import './common/_const.scss';
+
+@import './common/item/*scss';
+
+@import './_header.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+input, button, textarea {
+    outline: none;
+}
+
+h1.title--lg {
+    font-size: 36px;
+}
+
+h2.title--bg {
+    font-size: 28px;
+}
+
+h3.title--md {
+    font-size: 20px;
+}
+
+body {
+    min-width: 320px;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    @include Roboto(regular);
+}
+
+.mainContent {
+    flex: 1;
+}
+
+.totalWidth {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}

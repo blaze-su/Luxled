@@ -1,0 +1,89 @@
+.header {
+    &__topLine {
+        background-color: $grey;
+        height: 40px;
+        & * {
+            color: $textgrey;
+        }
+        &>.totalWidth {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__shopInfo {
+        display: flex;
+        align-items: center;
+        &>p {
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &__shopPhone {
+        font-size: 20px;
+        color: #212121;
+    }
+    &__navigation {
+        display: flex;
+        &Item {
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &__mainContent {
+        margin: 40px auto 25px auto;
+        &>.totalWidth {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__catalog {
+        display: flex;
+        &Btn {
+            width: 260px;
+            height: 50px;
+            border-radius: 4px;
+            border: solid 2px #5e2eb4;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 18px;
+            background-color: transparent;
+            font-size: 20px;
+            cursor: pointer;
+            &Pic {
+                margin-right: 15px;
+                max-width: 20px;
+                height: 16px;
+            }
+        }
+        &Item {
+            max-width: 130px;
+            padding: 0 10px;
+            &Pic {
+                margin: auto;
+                &Box {
+                    height: 80px;
+                    max-width: 90px;
+                    margin: 0 auto;
+                    display: flex;
+                    padding: 5px 0;
+                }
+            }
+            &Name {
+                color: $blue;
+                text-align: center;
+            }
+        }
+        &Link {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
