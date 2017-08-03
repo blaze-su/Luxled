@@ -1,29 +1,40 @@
 @import './common/_const.scss';
-
 @import './common/item/*scss';
+@import './pages-section/**/*.scss';
 
 @import './_header.scss';
-
+@import './_footer.scss';
 * {
     box-sizing: border-box;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    max-height: 100%;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
     outline: none;
 }
 
 h1.title--lg {
     font-size: 36px;
+    padding: 60px 0 40px 0;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1 !important;
 }
 
 h2.title--bg {
@@ -32,6 +43,14 @@ h2.title--bg {
 
 h3.title--md {
     font-size: 20px;
+    color: $black;
+}
+
+html {
+    font: 16px 'RobotoRegular' !important;
+    min-width: 320px;
+    width: 100%;
+    height: auto;
 }
 
 body {
@@ -39,10 +58,9 @@ body {
     width: 100%;
     min-height: 100vh;
     height: auto;
-    font-size: 16px;
     display: flex;
     flex-direction: column;
-    @include Roboto(regular);
+    line-height: 1.2 !important;
 }
 
 .mainContent {
@@ -54,4 +72,10 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    overflow: hidden;
+}
+
+.textUppercase {
+    margin: 0 4px;
+    text-transform: uppercase;
 }

@@ -1,0 +1,26 @@
+.breadCrumbs {
+    margin: 40px auto !important;
+    line-height: 1.88;
+    color: #757575;
+    display: flex;
+    &__item {
+        position: relative;
+        margin-left: 25px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -12px;
+            width: 1px;
+            background-color: #757575;
+            height: 50%;
+            transform: translate(-50%, -50%) rotate(20deg);
+        }
+        &:first-child {
+            margin-left: 0;
+            &:before {
+                content: none;
+            }
+        }
+    }
+}

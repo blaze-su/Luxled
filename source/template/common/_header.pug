@@ -4,7 +4,7 @@ block header
             .totalWidth
                 .header__shopInfo
                     p.header__shopCity г. Краснодар
-                    p.header__shopPhone 8 928 215-18-18
+                    h3.title--md.shopPhone 8 928 215-18-18
                     p.header__shopMode Пн-Пт с 09:00 до 18:00
                 -
                     var menuItem = [
@@ -20,8 +20,9 @@ block header
 
         .header__mainContent
             .totalWidth
-                .logo
-                    img.logo__pic(src="assets/img/logo.png", alt="logo")
+                a(href="/").logo
+                    //- +svgMix('logo__pic', 'LuxLed-Logo')
+                    img.logo__pic(src="assets/img/LuxLed-Logo.svg", alt="Logotip")
                     p.logo__caption Светодиодное освещение
 
                 button.header__catalogBtn Каталог
@@ -37,22 +38,21 @@ block header
                     span.cart__number пока пуста
 
         .header__catalogBox
-            .totalWidth
-                -
-                    var catalogItem = [
-                        {title: 'Светодиодные ленты', imgName: '1.jpg'},
-                        {title: 'Источники питания', imgName: '2.jpeg'},
-                        {title: 'Управлениее светом', imgName: '3.jpeg'},
-                        {title: 'Алюминевый профиль', imgName: '4.jpeg'},
-                        {title: 'Светодиодные светильники', imgName: '5.jpeg'},
-                        {title: 'Светодиодные лампы', imgName: '6.jpeg'},
-                        {title: 'Модули и линейки', imgName: '7.jpg'},
-                        {title: 'Светодиодный декор', imgName: '8.jpg'},
-                        {title: 'Светодиоды', imgName: '9.jpeg'} ]
-                ul.header__catalog
-                    each i in catalogItem
-                        li.header__catalogItem
-                            a(href="#").header__catalogLink
-                                .header__catalogItemPicBox
-                                    img(src= 'assets/img/header__catalog/'+i.imgName, alt="?").header__catalogItemPic
-                                p.header__catalogItemName= i.title
+            -
+                var catalogItem = [
+                    {title: 'Светодиодные ленты', imgName: '1.jpg'},
+                    {title: 'Источники питания', imgName: '2.jpeg'},
+                    {title: 'Управлениее светом', imgName: '3.jpeg'},
+                    {title: 'Алюминевый профиль', imgName: '4.jpeg'},
+                    {title: 'Светодиодные светильники', imgName: '5.jpeg'},
+                    {title: 'Светодиодные лампы', imgName: '6.jpeg'},
+                    {title: 'Модули и линейки', imgName: '7.jpg'},
+                    {title: 'Светодиодный декор', imgName: '8.jpg'},
+                    {title: 'Светодиоды', imgName: '9.jpeg'} ]
+            ul.header__catalog.totalWidth
+                each i in catalogItem
+                    li.header__catalogItem
+                        a(href="#").header__catalogLink
+                            .header__catalogItemPicBox
+                                img(src= 'assets/img/header__catalog/'+i.imgName, alt="?").header__catalogItemPic
+                            p.header__catalogItemName= i.title

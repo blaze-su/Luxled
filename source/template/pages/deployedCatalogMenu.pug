@@ -1,0 +1,57 @@
+extends ../_template
+
+block content
+
+    - var sequence = ['Каталог', 'Севтодиодные ленты']
+    +breadCrumbs(sequence, 'totalWidth')
+
+    main.mainContent
+        -
+            var menuCatalog = {
+                title: 'Ленты LUX smd 3528',
+                prev: 'Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета',
+                menu: [
+                    'Открытые RT 12V 60',
+                    'Открытые RT 24V 30, 60',
+                    'Открытые RT 36V 120, 3x',
+                    'Открытые RT 36V 120, 3x',
+                    'Открытые RT 36V 120, 3x',
+                    'Открытые RT 36V 120, 3x'
+                ]
+            }
+            var menuCatalog__last = {
+                menu_firts: [
+                    'Открытые RT 12V 60',
+                    'Открытые RT 24V 30, 60',
+                    'Открытые RT 36V 120, 3x'
+                ],
+                menu_last: [
+                    'Открытые RT 12V 60'
+                ]
+            }
+
+        .menuCatalog.totalWidth
+            - for (var i = 0; i < 5; i++) {
+                .menuCatalog__item
+                    h3.title--md.menuCatalog__itemTitle= menuCatalog.title
+                    p.menuCatalog__itemDescription= menuCatalog.prev
+
+                    if i != 4
+                        .menuCatalog__itemMenus
+                            - for (var j = 0; j < 4; j++) {
+                                ul.menuCatalog__itemMenu
+                                    each m in menuCatalog.menu
+                                        li.menuCatalog__itemMenuItem
+                                            a(href="#").menuCatalog__itemMenuLink= m
+                            - }
+                    else
+                        .menuCatalog__itemMenus
+                            ul.menuCatalog__itemMenu
+                                each i in menuCatalog__last.menu_firts
+                                    li.menuCatalog__itemMenuItem
+                                        a(href="#").menuCatalog__itemMenuLink= i
+                            ul.menuCatalog__itemMenu
+                                each j in menuCatalog__last.menu_last
+                                    li.menuCatalog__itemMenuItem
+                                        a(href="#").menuCatalog__itemMenuLink= j
+            - }

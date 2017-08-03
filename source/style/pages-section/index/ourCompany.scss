@@ -1,0 +1,19 @@
+.aboutCompany {
+    padding-bottom: 60px;
+    &Box {
+        display: flex;
+    }
+    &__photo {
+        margin-right: 40px;
+        max-width: 560px;
+        height: 490px;
+        flex: 1 1 100%;
+        &>img {
+            height: 100%;
+        }
+    }
+    &__text {
+        flex: 1 1 100%;
+        line-height: 1.88;
+    }
+}

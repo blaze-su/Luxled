@@ -1,11 +1,10 @@
 .logo {
     min-width: 160px;
-
+    color: $black;
     &__pic {
         min-width: 160px;
         max-width: 160px;
         height: 34px;
-        margin-bottom: 5px;
     }
 
     &__caption {

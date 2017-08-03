@@ -3,12 +3,17 @@
     height: 50px;
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    justify-content: flex-end;
     color: $black;
+
     &__pic {
         width: 55px;
         height: 50px;
         margin-right: 8px;
         flex: 1 1 100%;
+    }
+
+    &__title {
+        margin-bottom: 3px;
     }
 }

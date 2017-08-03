@@ -1,0 +1,38 @@
+.footer {
+    background-color: $greyE;
+    padding: 15px 15px 30px;
+    color: $footertextgrey;
+    &__menus {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__menu {
+        &Title {
+            margin-bottom: 30px;
+        }
+        &Item {
+            margin-top: 20px;
+        }
+    }
+    &__signature {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__payment {
+        &Text {
+            color: $black !important;
+            font-size: 20px;
+        }
+    }
+    &__copyright {
+        position: relative;
+        left: -10px;
+        &Year {
+            margin-left: 4px;
+        }
+        &DevelopmentCompany {
+            margin-left: 24px;
+        }
+    }
+}
