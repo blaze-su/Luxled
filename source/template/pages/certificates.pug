@@ -1,0 +1,21 @@
+extends ../_template
+
+block content
+    main.mainContent
+        .certificatesBox.totalWidth
+
+            h1.certificates__title.title--lg сертификаты
+
+            .certificates
+                - for (var i = 0; i < 9; i++) {
+                    .certificate
+                        .certificate__title Сертификат соответствия
+                        .certificate__number RU C-CN.AB72.B.08054
+                        .certificate__photo
+                            img(src="assets/img/certificate.jpg", alt="изображение сертификата")
+                        .certificate__preview.
+                            Соединители электрические: Кннекторы серии AARL, LGD, NEO.
+                        a(href="#").certificate__download
+                            p.certificate__downloadText Скачать PDF 249.9 Кб
+                            img(src="assets/img/PDF-downlaod.png", alt="pdf download").certificate__downloadPic
+                - }

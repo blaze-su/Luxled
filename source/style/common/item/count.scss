@@ -1,0 +1,18 @@
+.counter {
+    max-width: 50%;
+    border: none;
+    text-align: center;
+    &__box {
+        max-width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: solid 0.6px $catalogBorder;
+        border-radius: 4px;
+    }
+    &__quantity {
+        font-size: 20px;
+        cursor: pointer;
+    }
+}

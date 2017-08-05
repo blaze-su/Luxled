@@ -59,8 +59,11 @@ block footer
             .footer__signature
                 .footer__payment
                     p.footer__paymentText Мы принимаем
-                a(href="#").footer__agreement
-                    p Соглашение об обработке перснональных данных
-                .footer__copyright Copyright ©
-                    span.footer__copyrightYear 2017
-                    span.footer__copyrightDevelopmentCompany BLAZE
+                    a(href="#").footer__paymentLink
+                        +svgMix('footer__paymentItem', 'visa')
+                .footer__agreement
+                    a(href="#").footer__agreementLink Соглашение об обработке перснональных данных
+                    .footer__copyright Copyright ©
+                        span.footer__copyrightYear 2017
+                p.footer__developmentCompany Разработка и продвижение
+                    span.textUppercase BLAZE

@@ -1,7 +1,6 @@
 @import './common/_const.scss';
 @import './common/item/*scss';
 @import './pages-section/**/*.scss';
-
 @import './_header.scss';
 @import './_footer.scss';
 * {
@@ -22,10 +21,25 @@ img {
     height: auto;
 }
 
+svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
 input,
 button,
 textarea {
     outline: none;
+}
+
+.isHome {
+    & h1.title--lg {
+        text-align: center;
+    }
 }
 
 h1.title--lg {
@@ -33,7 +47,7 @@ h1.title--lg {
     padding: 60px 0 40px 0;
     margin: 0 auto;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     line-height: 1 !important;
 }
 

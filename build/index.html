@@ -11,8 +11,8 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/foundation.css">
-    <script src="/assets/js/app.js"></script>
-    <script src="/assets/js/foundation.js"></script><!--[if lt IE 9]>
+    <script src="/assets/js/foundation.js"></script>
+    <script src="/assets/js/app.js"></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body class="isHome">
@@ -117,28 +117,28 @@
               <div class="popularModels__itemPic"><img src="assets/img/popularModels/2.png" alt="popular model photo"></div>
               <div class="popularModels__itemInfo">
                 <p class="popularModels__itemName">Лента RT 2-5000 12V Yellow</p>
-                <p class="popularModels__itemPrice">99,80<span class="popularModels__itemCurrency">Руб.</span></p>
+                <p class="product__price">99,80<span class="product__currency">&#8381</span></p>
               </div>
             </div>
             <div class="popularModels__item--md">
               <div class="popularModels__itemPic"><img src="assets/img/popularModels/1.png" alt="popular model photo"></div>
               <div class="popularModels__itemInfo">
                 <p class="popularModels__itemName">Блок питания ХХХХХХХХ</p>
-                <p class="popularModels__itemPrice">1000<span class="popularModels__itemCurrency">Руб.</span></p>
+                <p class="product__price">1000<span class="product__currency">&#8381</span></p>
               </div>
             </div>
             <div class="popularModels__item--smGrey">
               <div class="popularModels__itemPic"><img src="assets/img/popularModels/3.png" alt="popular model photo"></div>
               <div class="popularModels__itemInfo">
                 <p class="popularModels__itemName">Пульт управления</p>
-                <p class="popularModels__itemPrice">500<span class="popularModels__itemCurrency">Руб.</span></p>
+                <p class="product__price">500<span class="product__currency">&#8381</span></p>
               </div>
             </div>
             <div class="popularModels__item--sm">
               <div class="popularModels__itemPic"><img src="assets/img/popularModels/4.jpg" alt="popular model photo"></div>
               <div class="popularModels__itemInfo">
                 <p class="popularModels__itemName">Алюминиевый Профиль PDS-ZM-2000 ANOD</p>
-                <p class="popularModels__itemPrice">200<span class="popularModels__itemCurrency">Руб.</span></p>
+                <p class="product__price">200<span class="product__currency">&#8381</span></p>
               </div>
             </div>
           </div>
@@ -224,10 +224,15 @@
         </div>
         <div class="footer__signature">
           <div class="footer__payment">
-            <p class="footer__paymentText">Мы принимаем</p>
-          </div><a class="footer__agreement" href="#">
-            <p>Соглашение об обработке перснональных данных</p></a>
-          <div class="footer__copyright">Copyright ©<span class="footer__copyrightYear">2017</span><span class="footer__copyrightDevelopmentCompany">BLAZE</span></div>
+            <p class="footer__paymentText">Мы принимаем</p><a class="footer__paymentLink" href="#">
+              <svg class="footer__paymentItem">
+                <use xlink:href="assets/img/sprite.svg#visa"></use>
+              </svg></a>
+          </div>
+          <div class="footer__agreement"><a class="footer__agreementLink" href="#">Соглашение об обработке перснональных данных</a>
+            <div class="footer__copyright">Copyright ©<span class="footer__copyrightYear">2017</span></div>
+          </div>
+          <p class="footer__developmentCompany">Разработка и продвижение<span class="textUppercase">BLAZE</span></p>
         </div>
       </div>
     </footer>

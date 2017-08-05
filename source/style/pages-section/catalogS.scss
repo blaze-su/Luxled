@@ -1,0 +1,66 @@
+.catalogs {
+    &__items {
+        max-width: 1200px;
+        margin-left: -40px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        max-width: 360px;
+        width: 100%;
+        max-height: 654px;
+        height: 654px;
+        padding: 20px 40px 50px;
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #efefef;
+        margin: 0 0 40px 40px;
+        position: relative;
+    }
+    &__title {
+        margin-bottom: 15px;
+    }
+    &__number {
+        margin-bottom: 40px;
+    }
+    &__photo {
+        display: flex;
+        height: 184px;
+        width: 208px;
+        margin: 0 auto 45px auto;
+        & img {
+            margin: auto;
+            max-width: 100%;
+            width: auto;
+            max-height: 100%;
+        }
+    }
+    &__preview {
+        max-height: 230px;
+        overflow: hidden;
+        max-width: 208px;
+        margin: 0 auto 30px auto;
+        text-align: left;
+    }
+    &__download {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        position: absolute;
+        bottom: 20px;
+        transform: translateX(-50%);
+        left: 50%;
+        &Text {
+            border-bottom: 1px solid $black;
+            white-space: nowrap;
+        }
+        &Pic {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+    }
+}

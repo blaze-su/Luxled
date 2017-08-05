@@ -1,0 +1,10 @@
+.accordionIcon {
+    min-width: 18px;
+    width: 18px;
+    min-height: 18px;
+    height: 18px;
+    cursor: pointer;
+    &--active {
+        transform: rotate(90deg);
+    }
+}

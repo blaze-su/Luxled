@@ -1,0 +1,22 @@
+extends ../_template
+
+block content
+    main.mainContent
+        .orders.totalWidth
+
+            h1.orders__title.title--lg КОРЗИНА ТОВАРОВ
+
+            .orders__items
+                .orders__item
+                    .orders__itemPhotoBox
+                        img(src="assets/img/catalogProduct.png", alt="?").orders__itemPhoto
+                    .orders__itemInfo
+                        .orders__itemDivision Лента светодиодная
+                        h3.title--md Светодиодная лента открытая 3528-60-12V
+                        h3.title--md Warm White 4,8Вт/м (300 LED)
+                    block counter
+                        include ../common/counter
+                    .orders__itemPriceBox
+                        .orders__itemPriceAll 1000 ₽                            
+                        .orders__itemCounter 1 шт. х 1 000
+                        .orders__itemDelete удалить

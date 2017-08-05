@@ -1,0 +1,58 @@
+extends ../_template
+
+block content
+
+    - var sequence = ['Каталог', 'Севтодиодные ленты']
+    +breadCrumbs(sequence, 'totalWidth')
+
+
+    main.mainContent
+        .searchPage.totalWidth
+
+            h1.catalog__title.title--lg СВЕТОДИОДНЫЕ ЛЕНТЫ
+
+            .catalog__mainSection.catalog__mainSection--full
+                .catalog__sorting
+                    p.catalog__sortingText Сортирвать:
+                    .catalog__sortingMenu
+                        .catalog__sortingTitleBox
+                            p.catalog__sortingTitle по названию
+                            +svgMix('accordionIcon', 'next')
+                        - var sortingItems = ['по названию','Рейтингу','Увелечению цены','Уменьшению цены']
+                        ul.catalog__sortingList
+                            each item, key in sortingItems
+                                if key == 0
+                                    li.catalog__sortingItem.catalog__sortingItem--current= item
+                                else
+                                    li.catalog__sortingItem= item
+
+
+
+                .catalog__items
+                    - for(var i = 0; i< 11; i++) {
+                        .catalog__item
+                            .catalog__itemArticle Артикул 11111
+
+                            .catalog__itemPhotoBox
+                                img(src="assets/img/catalogProduct.png", alt="product photo").catalog__itemPhoto
+
+                            .catalog__itemSalesIndicator(style="background-color: #0003ff")
+
+                            .catalog__itemInfo
+                                .catalog__itemName Лента светодиодная
+                                .catalog__itemModel RT 2-5000 12V Yellow
+
+                                .catalog__itemDetail
+                                    .catalog__itemCounterBox
+                                        .catalog__itemCounterQuantity -                                    
+                                        input(type="text" value='1' name='productCounter').catalog__itemCounter
+                                        .catalog__itemCounterQuantity +
+                                    .catalog__itemBuy
+                                        button.catalog__itemBuyBtn В корзину
+                                    .catalog__itemPrice 99,99 ₽
+                                        
+                                    .catalog__itemPDF
+                                        a(href="#").catalog__itemPDFLink PDF
+                    - }
+                block pagination
+                    include ../common/_pagination

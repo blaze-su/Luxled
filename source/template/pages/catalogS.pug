@@ -1,0 +1,23 @@
+extends ../_template
+
+block content
+    main.mainContent
+        .catalogs.totalWidth
+
+            h1.catalogs__title.title--lg каталоги
+
+            .catalogs__items
+                - for (var i = 0; i < 9; i++) {
+                    .catalogs__item
+                        .catalogs__title Светодиодное освещение -
+                        .catalogs__number Каталог 2017
+                        .catalogs__photo
+                            img(src="assets/img/certificate.jpg", alt="изображение сертификата")
+                        .catalogs__preview.
+                            В каталоге представленны светодиодные светильники (встраеваемые, накладные,
+                            подвесные, трековые, настольные, мебельные), светодиодные прожекторы,
+                            светодиодные лампы
+                        a(href="#").catalogs__download
+                            .catalogs__downloadText Скачать PDF 249.9 Кб
+                            img(src="assets/img/PDF-downlaod.png", alt="pdf download").catalogs__downloadPic
+                - }

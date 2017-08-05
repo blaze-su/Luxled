@@ -1,0 +1,14 @@
+block pagination
+    .pagination
+        .pagination__navBtn.pagination__navBtn--prev
+            +svgMix('pagination__navBtnIcon', 'next')
+        ul.pagination__pages
+            each i, key in [1,2,3,4,5]
+                if key == 0 
+                    li.pagination__page--current
+                        a(href="#").pagination__pageLink= i
+                else
+                    li.pagination__page
+                        a(href="#").pagination__pageLink= i
+        .pagination__navBtn.pagination__navBtn--next
+            +svgMix('pagination__navBtnIcon', 'next')

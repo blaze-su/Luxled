@@ -1,0 +1,54 @@
+.certificates {
+    max-width: 1200px;
+    margin-left: -40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.certificate {
+    max-width: 360px;
+    width: 100%;
+    padding: 20px 40px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #efefef;
+    margin: 0 0 40px 40px;
+    &__title {
+        margin-bottom: 15px;
+    }
+    &__number {
+        margin-bottom: 25px;
+    }
+    &__photo {
+        display: flex;
+        height: 220px;
+        width: 156px;
+        margin: 0 auto 20px auto;
+        & img {
+            margin: auto;
+            max-width: 100%;
+            width: auto;
+            max-height: 100%;
+        }
+    }
+    &__preview {
+        margin-bottom: 40px;
+    }
+    &__download {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        &Text {
+            border-bottom: 1px solid $black;
+        }
+        &Pic {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+        }
+    }
+}

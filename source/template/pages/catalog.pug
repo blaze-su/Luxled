@@ -1,0 +1,200 @@
+extends ../_template
+
+block content
+
+    - var sequence = ['Каталог', 'Севтодиодные ленты']
+    +breadCrumbs(sequence, 'totalWidth')
+
+
+    main.mainContent
+        .catalog.totalWidth
+
+            h1.catalog__title.title--lg СВЕТОДИОДНЫЕ ЛЕНТЫ
+
+            .catalog__leftSection                
+
+                -
+                    var leftProdList = [
+                        'Декоративное светодиодное оформление',
+                        'Ленты LUX smd 3528',
+                        'Ленты LUX smd 5060 [+RGB]',
+                        'Ленты LUX smd 2835',
+                        'Ленты LUX smd 5630 [+ULTRA]',
+                        'Ленты RGBW мультицвет, MIX белые',
+                        'Ленты RGB бегущий огонь',
+                        'Ленты фигурные [RZ,RV,DIP-LED]',
+                        'Ленты LUX smd 335 боковое свечение',
+                        'Ленты LUX smd 3014, 3020',
+                        'Ленты NormaLed',
+                        'Светодиодные листы',
+                        'Коннкторы, клипсы'
+                    ]
+
+                .catalog__productList
+                    ul.catalog__productItems
+                        each item in leftProdList
+                            li.catalog__productItem
+                                a(href="#").catalog__productLink= item
+
+                -
+                    var options = [
+                        {
+                            title: 'Цвет свечения',
+                            subMenuOptions: [
+                                'цвет',
+                                'цвет',
+                                'цвет',
+                                'цвет',
+                                'цвет',
+                                'цвет',
+                                'цвет'
+                            ]
+                        },
+                        {
+                            title: 'Размер светодиодов',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        },
+                        {
+                            title: 'Клас пылвлагозащиты',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        },
+                        {
+                            title: 'Напряжение питания',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        },
+                        {
+                            title: 'Плотность светодиодов',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        },
+                        {
+                            title: 'Потребляемая мощность, Вт',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        },
+                        {
+                            title: 'Ширина ленты, мм',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        }
+                    ]
+                
+                form.catalog__options
+                    .catalog__optionItems
+                        each o, key in options
+                            .catalog__option
+                                .catalog__optionsTitleBox
+                                    p.catalog__optionsTitle= o.title
+                                    +svgMix('accordionIcon', 'next')
+                                if key == 0
+                                    .catalog__optionsItemList.catalog__optionsItemList--squard
+                                        each m in o.subMenuOptions
+                                            //- name and value задавать програмно backend
+                                            label.catalog__optionsItem
+                                                .catalog__optionsItemName= m
+                                                input(type="checkbox" name="" value= m)
+                                                +svgMix('catalog__optionsItemCheck', 'check-square')
+                                else
+                                    .catalog__optionsItemList
+                                        each m in o.subMenuOptions
+                                            //- name and value задавать програмно backend
+                                            label.catalog__optionsItem
+                                                .catalog__optionsItemName= m
+                                                input(type="checkbox" name="" value= m)
+                                                +svgMix('catalog__optionsItemCheck', 'check-square')
+                                .catalog__optionFindProductBox
+                                    p.catalog__optionFindProductText Найдено товаров
+                                    .catalog__optionFindProductCount 120
+                                    a(href="#").catalog__optionFindProductShow Показать
+                    .catalog__optionBtn
+                        button.clear Очистить
+                        button.accept Применить
+
+            .catalog__mainSection
+                .catalog__sorting
+                    p.catalog__sortingText Сортирвать:
+                    .catalog__sortingMenu
+                        .catalog__sortingTitleBox
+                            p.catalog__sortingTitle по названию
+                            +svgMix('accordionIcon', 'next')
+                        - var sortingItems = ['по названию','Рейтингу','Увелечению цены','Уменьшению цены']
+                        ul.catalog__sortingList
+                            each item, key in sortingItems
+                                if key == 0
+                                    li.catalog__sortingItem.catalog__sortingItem--current= item
+                                else
+                                    li.catalog__sortingItem= item
+
+                
+
+                .catalog__items
+                    - for(var i = 0; i< 11; i++) {
+                        .catalog__item
+                            .catalog__itemArticle Артикул 11111
+
+                            .catalog__itemPhotoBox
+                                img(src="assets/img/catalogProduct.png", alt="product photo").catalog__itemPhoto
+
+                            .catalog__itemSalesIndicator(style="background-color: #0003ff")
+                            
+                            .catalog__itemInfo
+                                .catalog__itemName Лента светодиодная
+                                .catalog__itemModel RT 2-5000 12V Yellow
+
+                                .catalog__itemDetail
+                                    block counter
+                                        include ../common/counter
+                                    .catalog__itemBuy
+                                        button.catalog__itemBuyBtn В корзину
+                                    .catalog__itemPrice 99,99 ₽
+                                        
+                                    .catalog__itemPDF
+                                        a(href="#").catalog__itemPDFLink PDF
+                    - }
+                block pagination
+                    include ../common/_pagination
