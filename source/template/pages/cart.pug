@@ -2,11 +2,12 @@ extends ../_template
 
 block content
     main.mainContent
-        .orders.totalWidth
+        .basket.totalWidth
 
-            h1.orders__title.title--lg КОРЗИНА ТОВАРОВ
+            h1.basket__title.title--lg КОРЗИНА
 
             .orders__items
+                a(href="#").backToShop Вернуться к покупкам
                 .orders__item
                     .orders__itemPhotoBox
                         img(src="assets/img/catalogProduct.png", alt="?").orders__itemPhoto
@@ -33,21 +34,8 @@ block content
                         .orders__itemPriceAll 1000 ₽                            
                         .orders__itemCounter 1 шт. х 1 000
                         .orders__itemDelete удалить
-            form.orders__form
-                h2.title--bg.orders__formErrorTitle Заполните все поля со звездочкой *
-                label.orders__formItem--require
-                    span.orders__formItemTitle Ф.И.О
-                    input(type="text" name="name" placeholder="Иван Иванович Иванов")
-                label.orders__formItem--require
-                    span.orders__formItemTitle Телефон
-                    input(type="numb" name="phone" placeholder="+7(___) ___-__-__")
-                label.orders__formItem--require
-                    span.orders__formItemTitle E-mail
-                    input(type="email" name="mail" placeholder="Ivanov@yandex.ru")
-                label.orders__formItem
-                    span.orders__formItemTitle Коментарий
-                    textarea(name="message")
-                .orders__formTotal
-                    p.orders__formTotalText Итого: 8 000 ₽
-                .orders__formOrder
-                    button.orders__formOrderBtn Подтвердить заказ
+            
+            .orders__formTotal
+                p.orders__formTotalText Итого: 8 000 ₽
+            .orders__formOrder
+                button.orders__formOrderBtn Подтвердить заказ

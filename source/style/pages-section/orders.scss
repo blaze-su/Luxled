@@ -2,12 +2,16 @@
     &__items {
         display: flex;
         flex-direction: column;
+        position: relative;
     }
     &__item {
         border: 1px solid $catalogBorder;
         display: flex;
         align-items: center;
         margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
         &>.counter__box {
             margin-right: 50px;
             margin-left: 75px;
@@ -21,6 +25,7 @@
                 padding: 20px 45px;
                 max-width: 260px;
                 width: 260px;
+                border-right: solid 1px $catalogBorder;
             }
         }
         &Info {
@@ -49,6 +54,85 @@
         &Delete {
             color: $textgrey;
             cursor: pointer;
+        }
+    }
+    &__form {
+        margin: 80px auto 60px auto;
+        max-width: 760px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateX(-12%);
+        &ErrorTitle {
+            display: none;
+            color: $borderError;
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 560px;
+        }
+        &Item {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            font-size: 20px;
+            &--require {
+                @extend .orders__formItem;
+                & .orders__formItemTitle {
+                    &:after {
+                        content: '*';
+                        position: absolute;
+                        top: 0;
+                        right: -15px;
+                    }
+                }
+                & input.error {
+                    border-color: $borderError;
+                }
+            }
+            &Title {
+                position: relative;
+                line-height: 50px;
+            }
+            & input {
+                height: 50px;
+                max-width: 560px;
+                width: 100%;
+                padding: 0 5px 0 20px;
+                border: solid 1px #7f7e7e;
+            }
+            & textarea {
+                height: 200px;
+                max-width: 560px;
+                width: 100%;
+                padding: 15px 5px 5px 20px;
+                border: solid 1px #7f7e7e;
+                resize: none;
+            }
+        }
+        &Total {
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            &Text {
+                font-size: 28px;
+                margin: 0 auto 40px;
+            }
+        }
+        &Order {
+            text-align: center;
+            max-width: 560px;
+            width: 100%;
+            &Btn {
+                border-radius: 4px;
+                background-color: $indigo;
+                border: solid 1px $catalogBorder;
+                font-size: 20px;
+                color: $white;
+                padding: 12.5px 21.3px;
+            }
         }
     }
 }

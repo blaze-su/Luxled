@@ -93,3 +93,14 @@ body {
     margin: 0 4px;
     text-transform: uppercase;
 }
+
+.backToShop {
+    color: $textgrey;
+    border-bottom: 1px solid $catalogBorder;
+}
+
+.backToSite {
+    @extend .button--indigo;
+    border-color: $catalogBorder;
+    padding: 14.5px 44.86px;
+}

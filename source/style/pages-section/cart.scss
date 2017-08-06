@@ -1,0 +1,24 @@
+.basket {
+    margin-bottom: 60px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &__title {
+        width: 100%;
+    }
+    &>.orders__items {
+        margin-bottom: 47px;
+        width: 100%;
+    }
+    & .backToShop {
+        position: absolute;
+        top: -18px;
+        right: 0;
+        transform: translateY(-100%);
+    }
+    &>.orders__formTotal,
+    >.orders__formOrder {
+        max-width: 360px;
+        text-align: left;
+    }
+}

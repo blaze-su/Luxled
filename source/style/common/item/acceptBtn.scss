@@ -1,7 +1,4 @@
 .accept {
-    color: $white;
-    background: $indigo;
-    border: 1px solid $black;
-    border-radius: 4px;
+    @extend .button--indigo;
     padding: 5px 15px;
 }
