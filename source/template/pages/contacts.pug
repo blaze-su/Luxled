@@ -1,0 +1,37 @@
+extends ../_template
+
+block content
+    main.mainContent
+        .contacts.totalWidth
+
+            h1.contacts__title.title--lg КОНТАКТЫ
+
+            h2.contacts__subTitle.title--bg Наш магазин
+
+            .contacts__photos
+                .contacts__photoCase--lg
+                    img(src="assets/img/shop-photo/1.png", alt="").contacts__photo
+                .contacts__photoCase--md
+                    img(src="assets/img/shop-photo/2.png", alt="").contacts__photo
+                .contacts__photoCase--sm
+                    img(src="assets/img/shop-photo/3.png", alt="").contacts__photo
+                .contacts__photoCase--sm
+                    img(src="assets/img/shop-photo/4.png", alt="").contacts__photo
+
+            .contacts__infoBlock
+                .contacts__infoPhoneText Телефон в краснодаре
+                h2.title--bg.shopPhone 8 (928) 215-18-18
+                .contacts__infoWork
+                    .contacts__infoWorkDivision
+                        .contacts__infoWorkDivisionTitle Мы распологаемся по адресу:
+                        p г. Краснодар 
+                        p Ул. Северная 236/2
+                        p Этаж 3 Офис 29
+                    .contacts__infoWorkDivision
+                        .contacts__infoWorkDivisionTitle Время работы:
+                        p Пн-Вс, 9:00 - 18:00
+                    .contacts__infoWorkDivision
+                        .contacts__infoWorkDivisionTitle E-male:
+                        p Lux.led@mail.ru
+                .contacts__map
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeae6561e62fb2bad9ac32d437e1ef2c2bc6a8146540f92ae7593b22d24b3fc41&amp;width=100%&amp;height=780&amp;lang=ru_UA&amp;scroll=true"></script>

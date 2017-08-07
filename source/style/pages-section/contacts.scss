@@ -1,0 +1,74 @@
+.contacts {
+    &__subTitle {
+        text-align: center;
+        margin: 20px auto 40px;
+    }
+    &__photos {
+        margin: 0 -10px 50px 0;
+        &:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+    }
+    &__photo {
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+        &Case {
+            float: left;
+            margin: 0 10px 10px 0;
+            &--lg {
+                @extend .contacts__photoCase;
+                max-width: 580px;
+                min-width: 580px;
+                width: auto;
+                height: 600px;
+            }
+            &--md {
+                @extend .contacts__photoCase;
+                max-width: 570px;
+                min-width: 570px;
+                width: auto;
+                height: 310px;
+            }
+            &--sm {
+                @extend .contacts__photoCase;
+                max-width: 280px;
+                min-width: 280px;
+                width: auto;
+                height: 280px;
+            }
+        }
+    }
+    &__info {
+        &PhoneText {
+            margin-bottom: 15px;
+        }
+        &Block {
+            &>.shopPhone {
+                margin-bottom: 40px;
+            }
+        }
+        &Work {
+            display: flex;
+            margin-bottom: 40px;
+            &Division {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                &Title {
+                    line-height: 1.5;
+                    font-size: 20px;
+                }
+                & p {
+                    line-height: 1.5;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &__map {
+        margin-bottom: 60px;
+    }
+}

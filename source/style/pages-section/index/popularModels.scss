@@ -1,5 +1,12 @@
 .popularModels {
     padding-bottom: 60px;
+    &__items {
+        &:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+    }
     &__item {
         background-color: $greyF4;
         max-width: 100%;
