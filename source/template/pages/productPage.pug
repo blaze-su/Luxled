@@ -1,0 +1,76 @@
+extends ../_template
+
+block content
+
+    - var sequence = ['Каталог', 'Севтодиодные ленты']
+    +breadCrumbs(sequence, 'totalWidth')
+
+    main.mainContent
+        .productMore.totalWidth
+
+            h3.productMore__name.title--md Светодиодная лента открытая 3528-60-12V Warm White 4,8Вт/м (300 LED)
+            p.productMore__article Артикул: №39488537
+
+            .productMore__detail
+                .productMore__galery
+                    .productMore__galeryPictureMainBox
+                        img(src="assets/img/popularModels/2.png", alt="product photo").productMore__galeryPictureMain
+                    .productMore__galeryPictureOtherBox
+                        .productMore__galeryPictureOtherCase
+                            img(src="assets/img/popularModels/2.png", alt="product min photo").productMore__galeryPictureOther
+                        .productMore__galeryPictureOtherCase
+                            img(src="assets/img/popularModels/1.png", alt="product min photo").productMore__galeryPictureOther
+                        .productMore__galeryPictureOtherCase
+                            img(src="assets/img/popularModels/3.png", alt="product min photo").productMore__galeryPictureOther
+                        .productMore__galeryPictureOtherCase
+                            img(src="assets/img/popularModels/4.png", alt="product min photo").productMore__galeryPictureOther
+
+                .productMore__priceRegular
+                    .productMore__priceAll
+                        h1.title--lg Цена: 500 ₽
+                    .productMore__priceCounter
+                        block counter
+                            include ../common/counter.pug
+                        a(href="#").productMore__buy Купить
+                    .productMore__priceSaveBlock
+                        a(href="#").productMore__priceSaveBlockBtn Скачать PDF
+            .productMore__info
+                ul.productMore__infoMenu
+                    li.productMore__infoMenuItem
+                        a(href="description").productMore__infoMenuLink Описание
+                    li.productMore__infoMenuItem
+                        a(href="characteristics").productMore__infoMenuLink Характеристики
+
+                .productMore__infoText
+                    .productMore__infoTab#description
+                        h3.productMore__infoProductName.title--md Светодиодная лента открытая 3528-60-12V Warm White 4,8Вт/м (300 LED)
+                        p.
+                            Гибкая лента (на белом основании). Цвет свечения ТЕПЛЫЙ БЕЛЫЙ. 
+                            300шт светодиодов smd 3528, угол 120°. Питание 12V. 
+                            Длина 5м (на катушке), мощность 24Вт на катушку 5м. 
+                            Цена в прайсе за 1м. Ширина 8мм, высота 2.4мм.
+                    
+                    -
+                        var tableItem = [
+                            {title: 'Корпус (форма)', val: 'Открытый'},
+                            {title: 'Класс пыле-влагозащиты', val: 'IP20'},
+                            {title: 'Размер (тип) светодиода 3528', val: '\(3.5x2.8мм\)'},
+                            {title: 'Плотность светодиодов', val: '60'},
+                            {title: 'Напряжение питания, В', val: '12'},
+                            {title: 'Угол обзора, гр', val: '120'},
+                            {title: 'Мощность, Вт', val: '24'},
+                            {title: 'Световой поток, Лм', val: '900 / 1200'},
+                            {title: 'Артикул	N70024', val: 'Цветовая температура, K3200'},
+                            {title: 'Количество светодиодов', val: '300 шт'},
+                            {title: 'Длина', val: '5 000 мм'},
+                            {title: 'Цвет свечения', val: 'Белый (теплый)'},
+                            {title: 'Потребляемый ток, А', val: 'typ: 2 A'},
+                            {title: 'Ширина', val: '8 мм'}
+                        ]
+                    .productMore__infoTab#characteristics
+                        .productMore__infoCharacteristicsTable
+                            .productMore__infoCharacteristicsTableRow Характеристики
+                            each i in tableItem
+                                .productMore__infoCharacteristicsTableRow
+                                    .productMore__infoCharacteristicsTableColl= i.title
+                                    .productMore__infoCharacteristicsTableColl= i.val

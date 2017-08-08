@@ -3,8 +3,70 @@ $(document).ready(function() {
     catalogCheckBox();
     catalogAccordion();
     catalogSorting();
+    productPhotoGalery();
+    productMoreTableColumnColor();
+    productMoreTab();
     orderForm();
 });
+
+var slider = function() {
+
+};
+
+// в функции нет ещё активного состояния текущей картинки!
+var productPhotoGalery = function() {
+    $('.productMore__galeryPictureOtherCase').eq(0).addClass('productMore__galeryPictureOtherCase--active');
+    $('.productMore__galeryPictureOther').on('click', function() {
+
+        var needSrc = $(this).attr('src');
+        $('.productMore__galeryPictureMain').attr('src', needSrc);
+
+        $('.productMore__galeryPictureOtherCase--active').removeClass('productMore__galeryPictureOtherCase--active');
+
+        $(this).closest('.productMore__galeryPictureOtherCase').addClass('productMore__galeryPictureOtherCase--active');
+
+    });
+};
+
+var productMoreTableColumnColor = function() {
+    var rows = $('.productMore__infoCharacteristicsTableRow');
+    var firstColor = '#f4f4f4';
+    var secondColor = '#ffffff';
+    for (var i = 0; i < rows.length; i++) {
+        if (i % 2 == 0) {
+            rows.eq(i).css('background-color', firstColor);
+        } else {
+            rows.eq(i).css('background-color', secondColor);
+        }
+    }
+};
+
+var productMoreTab = function() {
+    var tabs = $('.productMore__infoTab');
+    var links = $('.productMore__infoMenuLink');
+
+    links.on('click', function(e) {
+        e.preventDefault();
+        $('.productMore__infoMenuLink--active').removeClass('productMore__infoMenuLink--active')
+        $(this).addClass('productMore__infoMenuLink--active');
+        var path = $(this).attr('href');
+        tabs.each(function(index) {
+            if (tabs.eq(index).attr('id') === path) {
+                tabs.css('display', 'none');
+                $(this).css('display', 'block');
+            }
+        });
+    });
+
+    tabs.eq(0).css('display', 'block');
+    var tabId0 = tabs.eq(0).attr('id');
+
+    $('.productMore__infoMenuLink').each(function(index) {
+        if (links.eq(index).attr('href') === tabId0) {
+            $(this).addClass('productMore__infoMenuLink--active');
+        }
+    });
+};
 
 var catalogCheckBox = function() {
     $('.catalog__optionsItem').on('click', function() {

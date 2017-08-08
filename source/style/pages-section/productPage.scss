@@ -1,0 +1,180 @@
+.productMore {
+    &__name {
+        margin-bottom: 40px;
+    }
+    &__article {
+        line-height: 1.88;
+        margin-bottom: 10px;
+        color: $textgrey;
+    }
+    &__detail {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+    &__galery {
+        max-width: 660px;
+        &Picture {
+            &Main {
+                max-width: 440px;
+                width: auto;
+                height: auto;
+                max-height: 220px;
+                margin: auto;
+                &Box {
+                    width: 660px;
+                    height: 470px;
+                    margin-bottom: 20px;
+                    display: flex;
+                    border: 1px solid $catalogBorder;
+                    background-color: $greyF4;
+                }
+            }
+            &Other {
+                max-width: 90%;
+                width: auto;
+                height: auto;
+                max-height: 90%;
+                margin: auto;
+                &Box {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                &Case {
+                    width: 100px;
+                    height: 100px;
+                    margin-right: 10px;
+                    border: 1px solid $catalogBorder;
+                    cursor: pointer;
+                    display: flex;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &--active {
+                        border-color: $indigo;
+                    }
+                }
+            }
+        }
+    }
+    &__price {
+        &Regular {
+            max-width: 460px;
+            width: 100%;
+            height: 100%;
+            border: solid 0.5px $catalogBorder;
+            &>div {
+                padding: 35px;
+            }
+        }
+        &All {
+            &>h1 {
+                padding: 0 !important;
+            }
+        }
+        &Counter {
+            // padding: 30px 30px 30px 20px;
+            background-color: $greyEF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &>.counter__box {
+                background: white;
+            }
+        }
+        &SaveBlock {
+            &Btn {
+                border-bottom: 1px solid $black;
+                position: relative;
+                margin-left: 52px;
+                &:before {
+                    content: '';
+                    background-image: url('../img/PDF-downlaod.png');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: absolute;
+                    top: 50%;
+                    left: -12px;
+                    width: 40px;
+                    height: 40px;
+                    transform: translate(-100%, -50%);
+                }
+            }
+        }
+    }
+    &__buy {
+        @extend .button--indigo;
+        font-size: 20px;
+        padding: 12px;
+        width: 150px;
+        min-width: 150px;
+        text-align: center;
+    }
+    &__info {
+        &Tab {
+            display: none;
+        }
+        &Menu {
+            margin-bottom: 60px;
+            display: flex;
+            padding: 0 5px;
+            &Item {
+                margin-right: 60px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            &Link {
+                padding: 0 10px;
+                position: relative;
+                line-height: 1.88;
+                padding-bottom: 28px;
+                &--active {
+                    @extend .productMore__infoMenuLink;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0px;
+                        width: 100%;
+                        height: 6px;
+                        background-color: $indigo;
+                    }
+                }
+            }
+        }
+        &Text {
+            padding: 0 15px;
+            margin-bottom: 60px;
+            &>#description {
+                & p {
+                    line-height: 1.88;
+                    margin-bottom: 15px;
+                    max-width: 525px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        &ProductName {
+            margin-bottom: 40px;
+        }
+        &Characteristics {
+            &Table {
+                max-width: 657px;
+                margin-left: -15px;
+                &Row {
+                    padding: 0 18px;
+                    width: 100%;
+                    min-height: 40px;
+                    display: flex;
+                    align-items: center;
+                }
+                &Coll {
+                    flex: 1 1;
+                }
+            }
+        }
+    }
+}
