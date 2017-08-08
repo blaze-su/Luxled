@@ -18,30 +18,26 @@ block content
                         .popularModels__itemPic
                             img(src="assets/img/popularModels/2.png", alt="popular model photo")
                         .popularModels__itemInfo
-                            p.popularModels__itemName Лента RT 2-5000 12V Yellow
-                            p.product__price 99,80
-                                span.product__currency &#8381
+                            p.popularModels__itemName Лента RT 2-5000 12V RGB 2X
+                            p.popularModels__itemModel (5060, 300 LED, LUX)
                     .popularModels__item--md
                         .popularModels__itemPic
                             img(src="assets/img/popularModels/1.png", alt="popular model photo")
                         .popularModels__itemInfo
-                            p.popularModels__itemName Блок питания ХХХХХХХХ
-                            p.product__price 1000
-                                span.product__currency &#8381
+                            p.popularModels__itemName Блок питания APS-100-12BM
+                            p.popularModels__itemModel (12V, 8.3A, 100W)
                     .popularModels__item--smGrey
                         .popularModels__itemPic
                             img(src="assets/img/popularModels/3.png", alt="popular model photo")
                         .popularModels__itemInfo
-                            p.popularModels__itemName Пульт управления
-                            p.product__price 500
-                                span.product__currency &#8381
+                            p.popularModels__itemName Контроллер LN-RF8B
+                            p.popularModels__itemModel (5-24V,120-576W,ПДУ сенсор 2.4G)
                     .popularModels__item--sm
                         .popularModels__itemPic
                             img(src="assets/img/popularModels/4.png", alt="popular model photo")
                         .popularModels__itemInfo
-                            p.popularModels__itemName Алюминиевый Профиль PDS-ZM-2000 ANOD
-                            p.product__price 200
-                                span.product__currency &#8381
+                            p.popularModels__itemName Профил
+                            p.popularModels__itemModel ARH-KANT-H16-2000 ANOD
                 
         
         
@@ -55,26 +51,46 @@ block content
                         img(src="assets/img/portfolio/2.jpg", alt="portfolio photo")
                     li.portfolio__item
                         img(src="assets/img/portfolio/3.jpg", alt="portfolio photo")
-        .aboutCompany
-            .totalWidth
-                h1.title--lg О компании
-                .aboutCompanyBox
-                    .aboutCompany__photo
-                        img(src="assets/img/our-company-photo.jpg", alt="photo our company")
-                    .aboutCompany__text.
-                        Как светодиодное освещение улучшает настроение и здоровье
-                        У большинства людей есть врожденное понимание того, как
-                        освещение окружающей среды может влиять на общее настроение. 
-                        Они устанавливают диммерные переключатели в столовые и другие 
-                        помещения своих домов, чтобы сделать более уютный вид, немного 
-                        приглушая свет. В темные зимние дни в северном климате терапевты 
-                        даже рекомендуют специальное полномасштабное освещение, 
-                        которое имитирует солнечный свет, чтобы облегчить симптомы 
-                        сезонного аффективного расстройства. Современные светодиодные 
-                        системы освещения теперь поднимают эту связь между светом и 
-                        настроением до следующего уровня. Инженеры по освещению 
-                        ежедневно экспериментируют со светодиодным освещением, 
-                        которое напрямую улучшает настроение и физическое здоровье с 
-                        помощью усовершенствованной оптики, светорассеивателей и 
-                        цветовой температуры освещения.
+        
+        //- //- данный блок убрали из макета
+        //- .aboutCompany
+        //-     .totalWidth
+        //-         h1.title--lg О компании
+        //-         .aboutCompanyBox
+        //-             .aboutCompany__photo
+        //-                 img(src="assets/img/our-company-photo.jpg", alt="photo our company")
+        //-             .aboutCompany__text.
+        //-                 Как светодиодное освещение улучшает настроение и здоровье
+        //-                 У большинства людей есть врожденное понимание того, как
+        //-                 освещение окружающей среды может влиять на общее настроение. 
+        //-                 Они устанавливают диммерные переключатели в столовые и другие 
+        //-                 помещения своих домов, чтобы сделать более уютный вид, немного 
+        //-                 приглушая свет. В темные зимние дни в северном климате терапевты 
+        //-                 даже рекомендуют специальное полномасштабное освещение, 
+        //-                 которое имитирует солнечный свет, чтобы облегчить симптомы 
+        //-                 сезонного аффективного расстройства. Современные светодиодные 
+        //-                 системы освещения теперь поднимают эту связь между светом и 
+        //-                 настроением до следующего уровня. Инженеры по освещению 
+        //-                 ежедневно экспериментируют со светодиодным освещением, 
+        //-                 которое напрямую улучшает настроение и физическое здоровье с 
+        //-                 помощью усовершенствованной оптики, светорассеивателей и 
+        //-                 цветовой температуры освещения.
     
+
+        //- заменили на этот блок
+        .whyWe.totalWidth
+            h1.title--lg ПОЧЕМУ МЫ?
+            ul.whyWe__beliefs
+                -
+                    var whyItems = [
+                        'Высокое качество продукции',
+                        'Большой ассортимент светодиодной продукции',
+                        'Оптовая и розничная продажа продукции ARLIGHT',
+                        'Индивидуальный подход к каждому клиенту',
+                        'Доставка в любой регион'
+                    ]
+                each item, key in whyItems
+                    li.whyWe__belief
+                        .whyWe__beliefPicBox
+                            img(src="assets/img/whyWe/"+(key+1)+".png", alt="whyWe belief picture").whyWe__beliefPic
+                        h3.whyWe__beliefText.title--md= item

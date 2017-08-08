@@ -69,10 +69,11 @@
                 }
             }
             &>.popularModels__itemInfo {
-                font-size: 18px;
+                & * {
+                    font-size: 16px;
+                }
             }
             & .popularModels__itemName {
-                font-size: 16px;
                 min-height: 55px;
                 max-height: 55px;
                 overflow: hidden;

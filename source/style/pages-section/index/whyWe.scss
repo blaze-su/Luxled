@@ -1,0 +1,25 @@
+.whyWe {
+    margin-bottom: 60px !important;
+    &__beliefs {
+        display: flex;
+        margin-right: -48px;
+    }
+    &__belief {
+        flex: 1;
+        margin: 0 48px 0 0;
+        &Pic {
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            &Box {
+                width: 100%;
+                height: 80px;
+                margin-bottom: 38px;
+                display: flex;
+            }
+        }
+        &Text {
+            text-align: center;
+        }
+    }
+}

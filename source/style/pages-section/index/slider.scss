@@ -54,6 +54,9 @@
         top: 0;
         left: 0;
         color: rgba($white, 0.9);
+        &Text {
+            display: none;
+        }
     }
     &__logo {
         position: absolute;
