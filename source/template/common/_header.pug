@@ -21,13 +21,32 @@ block header
         .header__mainContent
             .totalWidth
                 a(href="/").logo
-                    //- +svgMix('logo__pic', 'LuxLed-Logo')
                     img.logo__pic(src="assets/img/LuxLed-Logo.svg", alt="Logotip")
                     p.logo__caption Светодиодное освещение
 
-                button.header__catalogBtn Каталог
-                    +svgMix('header__catalogBtnPic', 'list')
-
+                -
+                    var headerMenuItems = [
+                        'Светодиодные ленты',
+                        'Источники питания',
+                        'Управление светом',
+                        'Алюминевый профиль',
+                        'Светодиодные светильники',
+                        'Светодиодные лампы',
+                        'Модули и линейки',
+                        'Светодиодный декор',
+                        'Светодиоды'
+                    ]
+                .header__menu
+                    button.header__catalogBtn Каталог
+                        +svgMix('header__catalogBtnPic', 'list')
+                    ul.header__menuList
+                        each item in headerMenuItems
+                            li.header__menuItem= item
+                                ul.header__subMenu
+                                    - for(var i = 0; i < 11; i++) {
+                                        li.header__subMenuItem Светодиодный прожектор
+                                    - }
+                                .header__menuItemAfter
                 .search
                     +svgMix('search__pic', 'magnifying-glass')
                     input(type="text" placeholder="Поиск по каталогу").search__field

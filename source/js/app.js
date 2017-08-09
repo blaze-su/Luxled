@@ -1,5 +1,6 @@
 ;
 $(document).ready(function() {
+    headerMenuItemHover();
     catalogCheckBox();
     catalogAccordion();
     catalogSorting();
@@ -13,7 +14,6 @@ var slider = function() {
 
 };
 
-// в функции нет ещё активного состояния текущей картинки!
 var productPhotoGalery = function() {
     $('.productMore__galeryPictureOtherCase').eq(0).addClass('productMore__galeryPictureOtherCase--active');
     $('.productMore__galeryPictureOther').on('click', function() {
@@ -106,4 +106,28 @@ var orderForm = function() {
 
     var inputRequire = $('.orders__formItem--require > input');
 
+};
+
+var headerMenuItemHover = function() {
+    $('.header__catalogBtn').on('click', function() {
+        $(this).next().toggleClass('header__menuList--active');
+    });
+    $('.header__menuItem').on('mouseover', function() {
+        $(this).find('.header__menuItemAfter').css('display', 'block');
+        var index = $(this).index();
+        var top;
+        if (index != 0) {
+            top = (-50 * index) + 49;
+        } else {
+            top = -1;
+        }
+        $(this).find('.header__subMenu').css({
+            'display': 'flex',
+            'top': top
+        });
+    });
+    $('.header__menuItem').on('mouseout', function() {
+        $(this).find('.header__menuItemAfter').css('display', 'none');
+        $(this).find('.header__subMenu').css('display', 'none');
+    });
 };

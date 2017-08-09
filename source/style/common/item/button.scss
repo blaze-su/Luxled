@@ -4,6 +4,9 @@
         background: $indigo;
         border: 1px solid $catalogBorder;
         border-radius: 4px;
+        &:hover {
+            background-color: $indigoLight;
+        }
     }
 }
 

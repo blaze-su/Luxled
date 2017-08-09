@@ -43,6 +43,72 @@
         &>.totalWidth {
             display: flex;
             justify-content: space-between;
+            overflow: visible;
+        }
+    }
+    &__menu {
+        display: flex;
+        position: relative;
+        width: 260px;
+        height: 50px;
+        &List {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            z-index: 2222222;
+            min-width: 100%;
+            width: auto;
+            &--active {
+                display: flex;
+            }
+        }
+        &Item {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding: 0 13px;
+            background-color: #f6f6f6;
+            border: solid .5px #f1f1f1;
+            cursor: pointer;
+            position: relative;
+            &After {
+                position: absolute;
+                display: none;
+                right: -2px;
+                top: 50%;
+                transform: translate(100%, -50%);
+                border: 6px solid transparent;
+                border-left: 12px solid $indigoLight;
+            }
+            &:hover {
+                background-color: $indigoLight;
+                border-color: $indigoLight;
+                color: $white;
+            }
+        }
+    }
+    &__subMenu {
+        display: none;
+        width: 260px;
+        border: solid 1px #adadad;
+        flex-direction: column;
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        transform: translateX(100%);
+        background-color: $white;
+        &Item {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding: 0 13px;
+            cursor: pointer;
+            color: $black;
+            &:hover {
+                background-color: #f6f6f6;
+            }
         }
     }
     &__catalog {
