@@ -8,13 +8,28 @@ $(document).ready(function() {
     productMoreTableColumnColor();
     productMoreTab();
     orderForm();
+    slider();
+    $('img').on('mousedown', function(e) {
+        e.preventDefault();
+    });
 });
 
-var slider = function() {
 
+
+var slider = function() {
+    var _width = $('.slider__slideItems').width();
+    $('.slider__slideNavigationItem').on('click', function() {
+        $('.slider__slideNavigationItem--active').removeClass('slider__slideNavigationItem--active');
+        $(this).addClass('slider__slideNavigationItem--active');
+        var _i = $(this).index();
+        var shift = _width * _i;
+        $('.slider__slideItems').animate({ scrollLeft: shift }, 300);
+    });
 };
 
 var productPhotoGalery = function() {
+    var firstSrc = $('.productMore__galeryPictureOther').eq(0).attr('src');
+    $('.productMore__galeryPictureMain').attr('src', firstSrc);
     $('.productMore__galeryPictureOtherCase').eq(0).addClass('productMore__galeryPictureOtherCase--active');
     $('.productMore__galeryPictureOther').on('click', function() {
 

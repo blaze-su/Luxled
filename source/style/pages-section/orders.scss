@@ -16,6 +16,9 @@
             margin-right: 50px;
             margin-left: 75px;
         }
+        &Counter {
+            padding-left: 4px;
+        }
         &Photo {
             max-width: 100%;
             margin: auto;
@@ -45,7 +48,13 @@
                 height: 130px;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: center;
+                &>div {
+                    margin-bottom: 10px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
             }
             &All {
                 font-size: 28px;
@@ -54,6 +63,7 @@
         &Delete {
             color: $textgrey;
             cursor: pointer;
+            padding-left: 6px;
         }
     }
     &__form {
@@ -126,11 +136,8 @@
             max-width: 560px;
             width: 100%;
             &Btn {
-                border-radius: 4px;
-                background-color: $indigo;
-                border: solid 1px $catalogBorder;
+                @extend .button--indigo;
                 font-size: 20px;
-                color: $white;
                 padding: 12.5px 21.3px;
             }
         }

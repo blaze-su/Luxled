@@ -148,9 +148,12 @@
                 }
             }
             &Name {
-                color: $blue;
+                color: $black;
                 text-align: center;
                 word-wrap: break-word;
+                &:hover {
+                    color: red;
+                }
             }
         }
         &Link {

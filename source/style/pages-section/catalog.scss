@@ -261,6 +261,7 @@
         &Photo {
             margin: auto;
             max-width: 100%;
+            transform: translateY(20px);
             &Box {
                 background-color: #f6f6f6;
                 max-height: 200px;
@@ -296,11 +297,8 @@
         &Buy {
             text-align: right;
             &Btn {
+                @extend .button--indigo;
                 padding: 6px 13.485px;
-                background-color: $indigo;
-                border: none;
-                color: $white;
-                border-radius: 4px;
             }
         }
         &Price {

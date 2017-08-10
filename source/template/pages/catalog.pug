@@ -147,10 +147,11 @@ block content
                                                 .catalog__optionsItemName= m
                                                 input(type="checkbox" name="" value= m)
                                                 +svgMix('catalog__optionsItemCheck', 'check-square')
-                                .catalog__optionFindProductBox
-                                    p.catalog__optionFindProductText Найдено товаров
-                                    .catalog__optionFindProductCount 120
-                                    a(href="#").catalog__optionFindProductShow Показать
+                                if key == 0
+                                    .catalog__optionFindProductBox
+                                        p.catalog__optionFindProductText Найдено товаров
+                                        .catalog__optionFindProductCount 120
+                                        a(href="#").catalog__optionFindProductShow Показать
                     .catalog__optionBtn
                         button.clear Очистить
                         button.accept Применить

@@ -43,10 +43,8 @@ block content
                                 .catalog__itemModel RT 2-5000 12V Yellow
 
                                 .catalog__itemDetail
-                                    .catalog__itemCounterBox
-                                        .catalog__itemCounterQuantity -                                    
-                                        input(type="text" value='1' name='productCounter').catalog__itemCounter
-                                        .catalog__itemCounterQuantity +
+                                    block counter
+                                        include ../common/counter
                                     .catalog__itemBuy
                                         button.catalog__itemBuyBtn В корзину
                                     .catalog__itemPrice 99,99 ₽
