@@ -10,7 +10,7 @@ block header
                     var menuItem = [
                         {title: 'О нас', link: '#'},
                         {title: 'Доставка и оплата', link: '#'},
-                        {title: 'Партнёрам', link: '#'},
+                        {title: 'Партнерам', link: '#'},
                         {title: 'Контакты', link: '#'}
                     ]
                 ul.header__navigation
@@ -20,59 +20,61 @@ block header
 
         .header__mainContent
             .totalWidth
-                a(href="/").logo
-                    img.logo__pic(src="assets/img/LuxLed-Logo.svg", alt="Logotip")
-                    p.logo__caption Светодиодное освещение
+                .header__mainContentInner
+                    a(href="/").logo
+                        img.logo__pic(src="assets/img/LuxLed-Logo.svg", alt="Logotip")
+                        p.logo__caption Светодиодное освещение
 
-                -
-                    var headerMenuItems = [
-                        'Светодиодные ленты',
-                        'Источники питания',
-                        'Управление светом',
-                        'Алюминиевый профиль',
-                        'Светодиодные светильники',
-                        'Светодиодные лампы',
-                        'Модули и линейки',
-                        'Светодиодный декор',
-                        'Светодиоды'
-                    ]
-                .header__menu
-                    button.header__catalogBtn Каталог
-                        +svgMix('header__catalogBtnPic', 'list')
-                    ul.header__menuList
-                        each item in headerMenuItems
-                            li.header__menuItem= item
-                                ul.header__subMenu
-                                    - for(var i = 0; i < 11; i++) {
-                                        li.header__subMenuItem Светодиодный прожектор
-                                    - }
-                                .header__menuItemAfter
-                .search
-                    +svgMix('search__pic', 'magnifying-glass')
-                    input(type="text" placeholder="Поиск по каталогу").search__field
-                
-                a(href="#").cart
-                    +svgMix('cart__pic', 'shopping-cart')
-                    p.cart__title Корзина
-                    span.cart__number пока пуста
+                    -
+                        var headerMenuItems = [
+                            'Светодиодные ленты',
+                            'Источники питания',
+                            'Управление светом',
+                            'Алюминиевый профиль',
+                            'Светодиодные светильники',
+                            'Светодиодные лампы',
+                            'Модули и линейки',
+                            'Светодиодный декор',
+                            'Светодиоды'
+                        ]
+                    .header__menu
+                        button.header__catalogBtn Каталог
+                            +svgMix('header__catalogBtnPic', 'list')
+                        ul.header__menuList
+                            each item in headerMenuItems
+                                li.header__menuItem= item
+                                    ul.header__subMenu
+                                        - for(var i = 0; i < 11; i++) {
+                                            li.header__subMenuItem Светодиодный прожектор
+                                        - }
+                                    .header__menuItemAfter
+                    .search
+                        +svgMix('search__pic', 'magnifying-glass')
+                        input(type="text" placeholder="Поиск по каталогу").search__field
+                    
+                    a(href="#").cart
+                        +svgMix('cart__pic', 'shopping-cart')
+                        p.cart__title Корзина
+                        span.cart__number пока пуста
 
         .header__catalogBox
             -
                 var catalogItem = [
                     {title: 'Светодиодные ленты', imgName: '1.png'},
                     {title: 'Источники питания', imgName: '2.png'},
-                    {title: 'Управлениее светом', imgName: '3.png'},
-                    {title: 'Алюминевый профиль', imgName: '4.png'},
+                    {title: 'Управление светом', imgName: '3.png'},
+                    {title: 'Алюминиевый профиль', imgName: '4.png'},
                     {title: 'Светодиодные светильники', imgName: '5.png'},
                     {title: 'Светодиодные лампы', imgName: '6.png'},
                     {title: 'Модули и линейки', imgName: '7.png'},
                     {title: 'Светодиодный декор', imgName: '8.png'},
                     {title: 'Светодиоды', imgName: '9.png'}
                 ]
-            ul.header__catalog.totalWidth
-                each i in catalogItem
-                    li.header__catalogItem
-                        a(href="#").header__catalogLink
-                            .header__catalogItemPicBox
-                                img(src= 'assets/img/header__catalog/'+i.imgName, alt="?").header__catalogItemPic
-                            p.header__catalogItemName= i.title
+            .totalWidth
+                ul.header__catalog
+                    each i in catalogItem
+                        li.header__catalogItem
+                            a(href="#").header__catalogLink
+                                .header__catalogItemPicBox
+                                    img(src= 'assets/img/header__catalog/'+i.imgName, alt="?").header__catalogItemPic
+                                p.header__catalogItemName= i.title

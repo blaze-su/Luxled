@@ -60,3 +60,44 @@
 }
 
 ////////////////////////////////////////////////// OTHER WIDTH'S
+@mixin w1216() {
+    @media only screen and (max-width: 1216px) {
+        @content;
+    }
+}
+
+@mixin w1207() {
+    @media only screen and (max-width: 1207px) {
+        @content;
+    }
+}
+
+@mixin w1200() {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin w1126() {
+    @media only screen and (max-width: 1126px) {
+        @content;
+    }
+}
+
+@mixin w926() {
+    @media only screen and (max-width: 926px) {
+        @content;
+    }
+}
+
+@mixin w916() {
+    @media only screen and (max-width: 916px) {
+        @content;
+    }
+}
+
+@mixin w626() {
+    @media only screen and (max-width: 626px) {
+        @content;
+    }
+}

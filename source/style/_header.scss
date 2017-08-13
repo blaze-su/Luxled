@@ -41,9 +41,18 @@
     &__mainContent {
         margin: 40px auto 25px auto;
         &>.totalWidth {
+            overflow: visible !important;
+        }
+        &Inner {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            overflow: visible;
+            margin-bottom: -30px;
+            margin-right: -15px;
+            &>* {
+                margin-right: 15px;
+                margin-bottom: 30px;
+            }
         }
     }
     &__menu {
@@ -51,6 +60,9 @@
         position: relative;
         width: 260px;
         height: 50px;
+        @include w1126 {
+            order: 4;
+        }
         &List {
             display: none;
             flex-direction: column;
@@ -113,6 +125,16 @@
     }
     &__catalog {
         display: flex;
+        overflow-x: auto;
+        user-select: none;
+        padding-bottom: 7px;
+        &::-webkit-scrollbar {
+            height: 3px;
+            background-color: $white;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $indigo;
+        }
         &Btn {
             width: 260px;
             height: 50px;
@@ -133,12 +155,18 @@
             }
         }
         &Item {
-            max-width: 130px;
-            padding: 0 10px 0 0;
+            max-width: 120px;
+            margin-right: 10px;
+            min-width: 120px;
+            &:last-child {
+                margin-right: 0;
+            }
             &Pic {
                 max-height: 100%;
                 width: auto;
                 margin: auto;
+                max-width: 100%;
+                height: auto;
                 &Box {
                     height: 80px;
                     max-width: 90px;
