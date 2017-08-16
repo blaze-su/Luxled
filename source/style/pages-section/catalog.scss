@@ -9,6 +9,10 @@
         display: flex;
         flex-direction: column;
         float: left;
+        @include w926 {
+            float: none;
+            width: 100%;
+        }
     }
     &__product {
         &List {
@@ -16,6 +20,9 @@
             background-color: $greyE;
             display: flex;
             flex-direction: column;
+            @include w926 {
+                margin-bottom: 40px;
+            }
         }
         &Item {
             margin-bottom: 5px;
@@ -87,10 +94,16 @@
         }
     }
     &__options {
-        display: flex;
         flex-direction: column;
         margin-top: 25px;
         padding-bottom: 40px;
+        @include w926 {
+            display: none;
+        }
+        &--active {
+            display: flex !important;
+            @extend .catalog__options;
+        }
         &Title {
             position: relative;
             &:after {
@@ -172,36 +185,36 @@
         overflow: hidden;
         margin: 0 auto;
         flex: 1 auto;
-        &--full {
-            @extend .catalog__mainSection;
-            &>.catalog__items {
-                @include w1216 {
-                    max-width: none !important;
-                    justify-content: flex-start !important;
-                }
-                @include w916 {
-                    justify-content: flex-end !important;
-                }
-                @include w626 {
-                    justify-content: center !important;
-                }
-            }
-            @include w1207 {
-                max-width: 870px;
-            }
-            @include w916 {
-                max-width: 677px;
-            }
-            @include w626 {
-                max-width: 493px;
-            }
-        }
-        &>.catalog__items {
-            @include w1216 {
-                max-width: 687px;
-                justify-content: flex-end;
-            }
-        }
+        // &--full {
+        //     @extend .catalog__mainSection;
+        //     &>.catalog__items {
+        //         @include w1216 {
+        //             max-width: none !important;
+        //             justify-content: flex-start !important;
+        //         }
+        //         @include w916 {
+        //             justify-content: flex-end !important;
+        //         }
+        //         @include w626 {
+        //             justify-content: center !important;
+        //         }
+        //     }
+        //     @include w1207 {
+        //         max-width: 870px;
+        //     }
+        //     @include w916 {
+        //         max-width: 677px;
+        //     }
+        //     @include w626 {
+        //         max-width: 493px;
+        //     }
+        // }
+        // &>.catalog__items {
+        //     @include w1216 {
+        //         max-width: 687px;
+        //         justify-content: flex-end;
+        //     }
+        // }
     }
     &__sorting {
         display: flex;
@@ -264,8 +277,8 @@
     &__items {
         display: flex;
         flex-wrap: wrap;
-        margin-left: -10px;
-        margin-bottom: -40px;
+        // margin-left: -10px;
+        margin: 0 auto -40px;
     }
     &__item {
         min-width: 280px;
@@ -274,7 +287,7 @@
         flex-direction: column;
         position: relative;
         border: solid 0.6px $catalogBorder;
-        margin: 0 0 40px 10px;
+        margin: 0 6px 40px 0px;
         &Article {
             position: absolute;
             top: 20px;
@@ -324,7 +337,7 @@
             text-align: right;
             &Btn {
                 @extend .button--indigo;
-                padding: 6px 13.485px;
+                padding: 6px 12.485px;
             }
         }
         &Price {

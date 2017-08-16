@@ -1,10 +1,17 @@
 .catalogs {
+    @include w1216 {
+        max-width: 800px !important;
+    }
     &__items {
         max-width: 1200px;
         margin-left: -40px;
         margin-bottom: 20px;
         display: flex;
         flex-wrap: wrap;
+        @include w816 {
+            max-width: 360px;
+            margin: 0 auto 20px;
+        }
     }
     &__item {
         max-width: 360px;
@@ -19,6 +26,12 @@
         background-color: $greyEF;
         margin: 0 0 40px 40px;
         position: relative;
+        @include w816 {
+            margin-left: 0;
+        }
+        @include w480 {
+            padding: 20px 20px 50px;
+        }
     }
     &__title {
         margin-bottom: 15px;
@@ -44,6 +57,9 @@
         max-width: 208px;
         margin: 0 auto 30px auto;
         text-align: left;
+        @include w360 {
+            text-align: center;
+        }
     }
     &__download {
         display: flex;

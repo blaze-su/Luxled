@@ -1,12 +1,15 @@
 .logo {
     min-width: 160px;
     color: $black;
+    @include w639 {
+        order: 1;
+        text-align: center;
+    }
     &__pic {
         min-width: 160px;
         max-width: 160px;
         height: 34px;
     }
-
     &__caption {
         font-size: 14px;
     }

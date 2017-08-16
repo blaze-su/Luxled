@@ -38,11 +38,13 @@ block header
                             'Светодиоды'
                         ]
                     .header__menu
-                        button.header__catalogBtn Каталог
+                        button.header__catalogBtn
+                            p.header__catalogBtnText Каталог
                             +svgMix('header__catalogBtnPic', 'list')
                         ul.header__menuList
                             each item in headerMenuItems
-                                li.header__menuItem= item
+                                li.header__menuItem
+                                    a.header__menuItemLink(href="#")= item
                                     ul.header__subMenu
                                         - for(var i = 0; i < 11; i++) {
                                             li.header__subMenuItem Светодиодный прожектор

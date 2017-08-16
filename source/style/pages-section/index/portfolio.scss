@@ -12,14 +12,34 @@
             width: 300px;
             height: 300px;
         }
+        @include w680 {
+            min-width: 260px;
+            width: 260px;
+            height: 260px;
+        }
+        @include w600 {
+            min-width: 230px;
+            width: 230px;
+            height: 230px;
+        }
+        @include w360 {
+            min-width: 200px;
+            width: 200px;
+            height: 200px;
+        }
         &:first-child {
             margin-left: 0;
         }
         &Box {
             display: flex;
             overflow: auto;
+            padding-bottom: 5px;
             &::-webkit-scrollbar {
-                display: none;
+                height: 5px;
+                background-color: $white;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $indigo;
             }
         }
         &>img {

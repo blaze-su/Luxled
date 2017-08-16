@@ -7,11 +7,53 @@
         margin-bottom: 40px;
         display: flex;
         justify-content: space-between;
+        @include w1023 {
+            flex-wrap: wrap;
+            margin-right: 0;
+        }
+        @include w479 {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
     &__menu {
-        width: 25%;
+        width: 100%;
+        max-width: 25%;
+        @include w1023 {
+            max-width: 50%;
+            margin-bottom: 50px;
+        }
+        @include w479 {
+            max-width: 90vw;
+            margin-bottom: 0;
+        }
+        &--active {
+            margin-bottom: 50px;
+            & .footer__menuInner {
+                display: block;
+            }
+        }
+        &Inner {
+            @include w479 {
+                display: none;
+            }
+        }
         &Title {
             margin-bottom: 30px;
+            @include w1023 {
+                margin-bottom: 20px;
+            }
+            @include w479 {
+                cursor: pointer;
+                font-size: 20px !important;
+            }
+            // &:after {
+            //     content: '1';
+            //     &:checked {
+            //         transform: rotate(90deg);
+            //     }
+            // }
         }
         &Item {
             margin-top: 20px;
@@ -20,19 +62,44 @@
     &__signature {
         display: flex;
         justify-content: space-between;
+        @include w1023 {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__payment {
-        max-width: 282px;
+        max-width: 230px;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+        @include w1023 {
+            flex: 1 50%;
+            max-width: 50%;
+            max-width: 100%;
+            margin-bottom: 25px;
+        }
+        @include w639 {}
         &Text {
             color: $black !important;
             font-size: 20px;
             margin-right: 20px;
+            margin-bottom: 10px;
+            @include w1023 {
+                margin-right: 0;
+                flex: 1 100%;
+                text-align: center;
+                margin-bottom: 20px
+            }
         }
         &Link {
+            &s {
+                width: 100%;
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            display: block;
             max-width: 100px;
             width: 100%;
             max-height: 27px;
@@ -40,10 +107,37 @@
             margin-right: 15px;
             margin-bottom: 10px;
             overflow: hidden;
+            @include w1023 {
+                margin-right: 0;
+                min-width: 110px;
+                padding-right: 10px;
+            }
         }
         &Item {
-            height: 100%;
             margin-left: -8px;
+            height: 27px;
+            @include w1023 {
+                margin-left: 0;
+            }
+        }
+    }
+    &__developmentCompany {
+        font-size: 16px !important;
+        @include w1023 {
+            flex: 1 50%;
+            max-width: 50%;
+            text-align: center;
+            margin-bottom: 10px;
+            max-width: 100%;
+        }
+    }
+    &__agreement {
+        &Link {
+            text-align: center;
+            display: flex;
+        }
+        @include w1023 {
+            order: 3;
         }
     }
     &__copyright {

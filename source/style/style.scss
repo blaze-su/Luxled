@@ -49,15 +49,33 @@ h1.title--lg {
     text-transform: uppercase;
     text-align: left;
     line-height: 1 !important;
+    @include w768 {
+        font-size: 30px;
+    }
+    @include w480 {
+        font-size: 26px;
+    }
 }
 
 h2.title--bg {
     font-size: 28px;
+    @include w768 {
+        font-size: 24px;
+    }
+    @include w480 {
+        font-size: 20px;
+    }
 }
 
 h3.title--md {
     font-size: 20px;
     color: $black;
+    @include w768 {
+        font-size: 18px;
+    }
+    @include w480 {
+        font-size: 17px;
+    }
 }
 
 html {
@@ -65,6 +83,10 @@ html {
     min-width: 320px;
     width: 100%;
     height: auto;
+    position: relative;
+    @include w768 {
+        font-size: 15px !important;
+    }
 }
 
 body {
@@ -87,6 +109,9 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     overflow: hidden;
+    @include w600 {
+        padding: 0 15px;
+    }
 }
 
 .textUppercase {

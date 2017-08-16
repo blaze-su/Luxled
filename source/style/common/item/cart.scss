@@ -1,19 +1,32 @@
 .cart {
-    width: 150px;
+    flex-basis: 150px;
     height: 50px;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-end;
     color: $black;
-
+    @include w916 {
+        max-width: 50px;
+        min-width: auto;
+    }
+    @include w639 {
+        order: 2;
+    }
     &__pic {
         width: 55px;
         height: 50px;
         margin-right: 8px;
         flex: 1 1 100%;
     }
-
     &__title {
         margin-bottom: 3px;
+        @include w916 {
+            display: none;
+        }
+    }
+    &__number {
+        @include w916 {
+            display: none;
+        }
     }
 }

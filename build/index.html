@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/foundation.css">
     <script src="/assets/js/foundation.js"></script>
-    <script src="/assets/js/app.js"></script><!--[if lt IE 9]>
+    <script src="/assets/js/app.js"></script><!--[if IE]><![endif]-->
+<!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body class="isHome">
@@ -37,13 +38,14 @@
           <div class="header__mainContentInner"><a class="logo" href="/"><img class="logo__pic" src="assets/img/LuxLed-Logo.svg" alt="Logotip">
               <p class="logo__caption">Светодиодное освещение</p></a>
             <div class="header__menu">
-              <button class="header__catalogBtn">Каталог
+              <button class="header__catalogBtn">
+                <p class="header__catalogBtnText">Каталог</p>
                 <svg class="header__catalogBtnPic">
                   <use xlink:href="assets/img/sprite.svg#list"></use>
                 </svg>
               </button>
               <ul class="header__menuList">
-                <li class="header__menuItem">Светодиодные ленты
+                <li class="header__menuItem"><a class="header__menuItemLink" href="#">Светодиодные ленты</a>
                   <ul class="header__subMenu">
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
@@ -59,7 +61,7 @@
                   </ul>
                   <div class="header__menuItemAfter"></div>
                 </li>
-                <li class="header__menuItem">Источники питания
+                <li class="header__menuItem"><a class="header__menuItemLink" href="#">Источники питания</a>
                   <ul class="header__subMenu">
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
@@ -75,7 +77,7 @@
                   </ul>
                   <div class="header__menuItemAfter"></div>
                 </li>
-                <li class="header__menuItem">Управление светом
+                <li class="header__menuItem"><a class="header__menuItemLink" href="#">Управление светом</a>
                   <ul class="header__subMenu">
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
@@ -91,7 +93,7 @@
                   </ul>
                   <div class="header__menuItemAfter"></div>
                 </li>
-                <li class="header__menuItem">Алюминиевый профиль
+                <li class="header__menuItem"><a class="header__menuItemLink" href="#">Алюминиевый профиль</a>
                   <ul class="header__subMenu">
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
@@ -107,7 +109,7 @@
                   </ul>
                   <div class="header__menuItemAfter"></div>
                 </li>
-                <li class="header__menuItem">Светодиодные светильники
+                <li class="header__menuItem"><a class="header__menuItemLink" href="#">Светодиодные светильники</a>
                   <ul class="header__subMenu">
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
@@ -123,7 +125,7 @@
                   </ul>
                   <div class="header__menuItemAfter"></div>
                 </li>
-                <li class="header__menuItem">Светодиодные лампы
+                <li class="header__menuItem"><a class="header__menuItemLink" href="#">Светодиодные лампы</a>
                   <ul class="header__subMenu">
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
@@ -139,7 +141,7 @@
                   </ul>
                   <div class="header__menuItemAfter"></div>
                 </li>
-                <li class="header__menuItem">Модули и линейки
+                <li class="header__menuItem"><a class="header__menuItemLink" href="#">Модули и линейки</a>
                   <ul class="header__subMenu">
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
@@ -155,7 +157,7 @@
                   </ul>
                   <div class="header__menuItemAfter"></div>
                 </li>
-                <li class="header__menuItem">Светодиодный декор
+                <li class="header__menuItem"><a class="header__menuItemLink" href="#">Светодиодный декор</a>
                   <ul class="header__subMenu">
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
@@ -171,7 +173,7 @@
                   </ul>
                   <div class="header__menuItemAfter"></div>
                 </li>
-                <li class="header__menuItem">Светодиоды
+                <li class="header__menuItem"><a class="header__menuItemLink" href="#">Светодиоды</a>
                   <ul class="header__subMenu">
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
                     <li class="header__subMenuItem">Светодиодный прожектор</li>
@@ -264,28 +266,28 @@
             <div class="popularModels__item--lg">
               <div class="popularModels__itemPic"><img src="assets/img/popularModels/1.png" alt="popular model photo"></div>
               <div class="popularModels__itemInfo">
-                <p class="popularModels__itemName">Лента RT 2-5000 12V RGB 2X</p>
+                <h3 class="title--md popularModels__itemName">Лента RT 2-5000 12V RGB 2X</h3>
                 <p class="popularModels__itemModel">(5060, 300 LED, LUX)</p>
               </div>
             </div>
             <div class="popularModels__item--md">
               <div class="popularModels__itemPic"><img src="assets/img/popularModels/2.png" alt="popular model photo"></div>
               <div class="popularModels__itemInfo">
-                <p class="popularModels__itemName">Блок питания APS-100-12BM</p>
+                <h3 class="title--md popularModels__itemName">Блок питания APS-100-12BM</h3>
                 <p class="popularModels__itemModel">(12V, 8.3A, 100W)</p>
               </div>
             </div>
             <div class="popularModels__item--smGrey">
               <div class="popularModels__itemPic"><img src="assets/img/popularModels/3.png" alt="popular model photo"></div>
               <div class="popularModels__itemInfo">
-                <p class="popularModels__itemName">Контроллер LN-RF8B</p>
+                <h3 class="title--md popularModels__itemName">Контроллер LN-RF8B</h3>
                 <p class="popularModels__itemModel">(5-24V,120-576W,ПДУ сенсор 2.4G)</p>
               </div>
             </div>
             <div class="popularModels__item--sm">
               <div class="popularModels__itemPic"><img src="assets/img/popularModels/4.png" alt="popular model photo"></div>
               <div class="popularModels__itemInfo">
-                <p class="popularModels__itemName">Профиль</p>
+                <h3 class="title--md popularModels__itemName">Профиль</h3>
                 <p class="popularModels__itemModel">ARH-KANT-H16-2000 ANOD</p>
               </div>
             </div>
@@ -370,10 +372,44 @@
         </div>
         <div class="footer__signature">
           <div class="footer__payment">
-            <p class="footer__paymentText">Мы принимаем</p><a class="footer__paymentLink" href="#">
-              <svg class="footer__paymentItem">
-                <use xlink:href="assets/img/sprite.svg#visa"></use>
-              </svg></a>
+            <p class="footer__paymentText">Мы принимаем</p>
+            <div class="footer__paymentLinks"><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a><a class="footer__paymentLink" href="#">
+                <svg class="footer__paymentItem">
+                  <use xlink:href="assets/img/sprite.svg#visa"></use>
+                </svg></a></div>
           </div>
           <div class="footer__agreement"><a class="footer__agreementLink" href="#">Соглашение об обработке персональных данных</a>
             <div class="footer__copyright">Copyright ©<span class="footer__copyrightYear">2017</span></div>

@@ -2,11 +2,16 @@
     margin-bottom: 60px !important;
     &__beliefs {
         display: flex;
-        margin-right: -48px;
+        flex-wrap: wrap;
+        margin: 0 auto;
     }
     &__belief {
-        flex: 1;
-        margin: 0 48px 0 0;
+        max-width: 232px;
+        min-width: 232px;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
         &Pic {
             width: 80px;
             height: 80px;
