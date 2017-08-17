@@ -5,6 +5,9 @@
     align-items: flex-end;
     &__title {
         width: 100%;
+        @include w600 {
+            margin-bottom: 20px;
+        }
     }
     &>.orders__items {
         margin-bottom: 47px;
@@ -15,10 +18,17 @@
         top: -18px;
         right: 0;
         transform: translateY(-100%);
+        @include w600 {
+            top: -16px;
+        }
     }
     &>.orders__formTotal,
     >.orders__formOrder {
         max-width: 360px;
         text-align: left;
+        @include w600 {
+            max-width: 100%;
+            text-align: center;
+        }
     }
 }

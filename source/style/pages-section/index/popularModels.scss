@@ -19,15 +19,16 @@
         display: flex;
         flex-direction: column;
         float: left;
+        border: 2.5px solid #fff;
         @include w1023 {
             max-width: 50% !important;
             max-height: 300px !important;
             padding: 10px !important;
-            border: 0.5px solid #fff;
             &>.popularModels__itemPic {
                 display: flex;
                 height: 286px !important;
                 width: 100% !important;
+                border: 0.5px solid #fff;
                 & img {
                     margin: auto !important;
                     max-height: 186px !important;

@@ -12,8 +12,8 @@ block content
                         img(src="assets/img/catalogProduct.png", alt="?").orders__itemPhoto
                     .orders__itemInfo
                         .orders__itemDivision Лента светодиодная
-                        h3.title--md Светодиодная лента открытая 3528-60-12V
-                        h3.title--md Warm White 4,8Вт/м (300 LED)
+                        h3.title--md.orders__itemName Светодиодная лента открытая 3528-60-12V
+                        h3.title--md.orders__itemModel Warm White 4,8Вт/м (300 LED)
                     block counter
                         include ../common/counter
                     .orders__itemPriceBox
@@ -25,8 +25,8 @@ block content
                         img(src="assets/img/catalogProduct.png", alt="?").orders__itemPhoto
                     .orders__itemInfo
                         .orders__itemDivision Лента светодиодная
-                        h3.title--md Светодиодная лента открытая 3528-60-12V
-                        h3.title--md Warm White 4,8Вт/м (300 LED)
+                        h3.title--md.orders__itemName Светодиодная лента открытая 3528-60-12V
+                        h3.title--md.orders__itemModel Warm White 4,8Вт/м (300 LED)
                     block counter
                         include ../common/counter
                     .orders__itemPriceBox
@@ -36,13 +36,13 @@ block content
             form.orders__form
                 h2.title--bg.orders__formErrorTitle Заполните все поля со звездочкой *
                 label.orders__formItem--require
-                    span.orders__formItemTitle Ф.И.О
+                    span.orders__formItemTitle Ф.И.О *
                     input(type="text" name="name" placeholder="Иван Иванович Иванов")
                 label.orders__formItem--require
-                    span.orders__formItemTitle Телефон
+                    span.orders__formItemTitle Телефон *
                     input(type="numb" name="phone" placeholder="+7(___) ___-__-__")
                 label.orders__formItem--require
-                    span.orders__formItemTitle E-mail
+                    span.orders__formItemTitle E-mail *
                     input(type="email" name="mail" placeholder="Ivanov@yandex.ru")
                 label.orders__formItem
                     span.orders__formItemTitle Коментарий
