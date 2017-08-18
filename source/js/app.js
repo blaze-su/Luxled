@@ -26,7 +26,7 @@ $(document).ready(function() {
         paginationClickable: true,
         paginationElement: 'li'
     });
-    catalogFilterBox();
+    // catalogFilterBox();
 });
 
 $(window).resize(function() {
@@ -39,12 +39,12 @@ $(window).resize(function() {
     }
 });
 
-var catalogFilterBox = function() {
-    $('.catalog__optionsItem').on('click', function() {
-        var top = $(this).offset().top - $('.catalog__optionItems').offset().top;
-        $('.catalog__optionFindProductBox').addClass('catalog__optionFindProductBox--active').css('top', top);
-    });
-};
+// var catalogFilterBox = function() {
+//     $('.catalog__optionsItem').on('click', function() {
+//         var top = $(this).offset().top - $('.catalog__optionItems').offset().top;
+//         $('.catalog__optionFindProductBox').addClass('catalog__optionFindProductBox--active').css('top', top);
+//     });
+// };
 
 var mediaCenter = function(count, elem, box, boxControlSize) {
     var size;
