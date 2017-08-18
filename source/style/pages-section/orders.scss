@@ -179,6 +179,9 @@
             margin-bottom: 40px;
             width: 100%;
             max-width: 560px;
+            @include w480 {
+                margin-bottom: 20px;
+            }
         }
         &Item {
             width: 100%;

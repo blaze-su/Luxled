@@ -30,7 +30,6 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-    slider();
     mediaCenter(5, $('.whyWe__belief'), $('.whyWe__beliefs'), $('.totalWidth'));
     mediaCenter(3, $('.catalog__item'), $('.catalog__items'), $('.catalog__mainSection'));
     mediaCenter(4, $('.catalog__item'), $('.catalog__items'), $('.catalog__mainSection--full'));
