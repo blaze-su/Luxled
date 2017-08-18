@@ -2,25 +2,17 @@ block slider
     .slider
         .slider__info
             h1.title--lg Luxled - официальный дилер arlight
-            //- пока что убрали
-            //- .slider__infoText
-            //-     h1.title--lg Luxled
-            //-     p офицальный дилер
-            //-         span.textUppercase arlight
 
-        .slider__slideBox
-            ul.slider__slideItems
-                li.slider__slide
+        .slider__slideBox.swiper-container.swiper2
+            ul.slider__slideItems.swiper-wrapper
+                li.slider__slide.swiper-slide
                     img(src="assets/img/slider/1.jpg", alt="slide")
-                li.slider__slide
+                li.slider__slide.swiper-slide
                     img(src="assets/img/slider/2.jpg", alt="slide")
-                li.slider__slide
+                li.slider__slide.swiper-slide
                     img(src="assets/img/slider/3.jpg", alt="slide")
             
-            ul.slider__slideNavigation
-                li.slider__slideNavigationItem.slider__slideNavigationItem--active
-                li.slider__slideNavigationItem
-                li.slider__slideNavigationItem
+            ul.swiper-pagination
         
         .slider__logo
             img(src="assets/img/slider/slider-logo.png", alt="slider logo")

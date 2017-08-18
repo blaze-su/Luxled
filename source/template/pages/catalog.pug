@@ -129,6 +129,10 @@ block content
                 
                 form.catalog__options
                     .catalog__optionItems
+                        .catalog__optionFindProductBox
+                            p.catalog__optionFindProductText Найдено товаров
+                            .catalog__optionFindProductCount 120
+                            a(href="#").catalog__optionFindProductShow Показать
                         each o, key in options
                             .catalog__option
                                 .catalog__optionsTitleBox
@@ -150,11 +154,6 @@ block content
                                                 .catalog__optionsItemName= m
                                                 input(type="checkbox" name="" value= m)
                                                 +svgMix('catalog__optionsItemCheck', 'check-square')
-                                if key == 0
-                                    .catalog__optionFindProductBox
-                                        p.catalog__optionFindProductText Найдено товаров
-                                        .catalog__optionFindProductCount 120
-                                        a(href="#").catalog__optionFindProductShow Показать
                     .catalog__optionBtn
                         button.clear Очистить
                         button.accept Применить

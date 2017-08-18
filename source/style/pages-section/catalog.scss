@@ -35,13 +35,13 @@
         display: flex;
         flex-direction: column;
         padding: 0 15px;
-        position: relative;
         border-top: 2px solid #979797;
         &:last-child {
             border-bottom: 2px solid #979797;
         }
         &Items {
             margin-bottom: 40px;
+            position: relative;
         }
         &Btn {
             display: flex;
@@ -50,18 +50,19 @@
         &FindProduct {
             &Box {
                 display: none;
-                // display: flex;
                 height: 35px;
                 align-items: center;
                 background-color: $white;
                 position: absolute;
-                top: 50px;
-                right: 0;
+                right: -33px;
                 padding-right: 5px;
-                transform: translateX(calc( 100% + 33px));
+                transform: translate(100%, 50%);
                 z-index: 1111;
                 border: 1px solid $indigo;
                 border-left: none;
+                &--active {
+                    display: flex;
+                }
                 &:after {
                     position: absolute;
                     left: -15px;
@@ -185,36 +186,6 @@
         overflow: hidden;
         margin: 0 auto;
         flex: 1 auto;
-        // &--full {
-        //     @extend .catalog__mainSection;
-        //     &>.catalog__items {
-        //         @include w1216 {
-        //             max-width: none !important;
-        //             justify-content: flex-start !important;
-        //         }
-        //         @include w916 {
-        //             justify-content: flex-end !important;
-        //         }
-        //         @include w626 {
-        //             justify-content: center !important;
-        //         }
-        //     }
-        //     @include w1207 {
-        //         max-width: 870px;
-        //     }
-        //     @include w916 {
-        //         max-width: 677px;
-        //     }
-        //     @include w626 {
-        //         max-width: 493px;
-        //     }
-        // }
-        // &>.catalog__items {
-        //     @include w1216 {
-        //         max-width: 687px;
-        //         justify-content: flex-end;
-        //     }
-        // }
     }
     &__sorting {
         display: flex;
@@ -277,7 +248,6 @@
     &__items {
         display: flex;
         flex-wrap: wrap;
-        // margin-left: -10px;
         margin: 0 auto -40px;
     }
     &__item {
