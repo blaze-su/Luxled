@@ -47,19 +47,45 @@ $(window).resize(function() {
 
 var mediaCenter = function(count, elem, box, boxControlSize) {
     var size;
-    for (var i = 1; i <= (count + 1); i++) {
-        if (boxControlSize) {
-            size = boxControlSize.width();
-        } else {
-            size = box.width();
-        }
-        if (size < elem.outerWidth(true) * i) {
-            if (i == 1) {
-                box.css('max-width', elem.outerWidth(true) * i);
+    if (elem.length < count) {
+        for (var i = 1; i <= elem.length + 1; i++) {
+            if (boxControlSize) {
+                size = boxControlSize.width();
             } else {
-                box.css('max-width', elem.outerWidth(true) * (i - 1));
+                size = box.width();
             }
-            break
+            if (i == elem.length + 1) {
+                if (i == 1) {
+                    box.css('max-width', elem.outerWidth(true) * i);
+                } else {
+                    box.css('max-width', elem.outerWidth(true) * (i - 1));
+                }
+                break
+            }
+            if (size < elem.outerWidth(true) * i) {
+                if (i == 1) {
+                    box.css('max-width', elem.outerWidth(true) * i);
+                } else {
+                    box.css('max-width', elem.outerWidth(true) * (i - 1));
+                }
+                break
+            }
+        }
+    } else {
+        for (var i = 1; i <= count + 1; i++) {
+            if (boxControlSize) {
+                size = boxControlSize.width();
+            } else {
+                size = box.width();
+            }
+            if (size < elem.outerWidth(true) * i) {
+                if (i == 1) {
+                    box.css('max-width', elem.outerWidth(true) * i);
+                } else {
+                    box.css('max-width', elem.outerWidth(true) * (i - 1));
+                }
+                break
+            }
         }
     }
 };
