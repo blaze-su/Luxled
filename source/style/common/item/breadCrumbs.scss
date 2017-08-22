@@ -3,6 +3,9 @@
     line-height: 1.88;
     color: #757575;
     display: flex;
+    @include w639 {
+        margin: 20px auto !important;
+    }
     &__item {
         position: relative;
         margin-left: 25px;

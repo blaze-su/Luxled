@@ -7,17 +7,19 @@ $(document).ready(function() {
     catalogAccordion();
     catalogSorting();
     productPhotoGalery();
-    productMoreTableColumnColor();
+    productMoreTableRowColor();
     productMoreTab();
     orderForm();
     footerMenu();
     $('img').on('mousedown', function(e) { e.preventDefault(); });
     hScroll($('.header__catalogItem'), $('.header__catalog'));
     hScroll($('.portfolio__item'), $('.portfolio__itemBox'));
+    hScroll($('.productMore__galeryPictureOtherCase '), $('.productMore__galeryPictureOtherBox'));
 
     mediaCenter(5, $('.whyWe__belief'), $('.whyWe__beliefs'), $('.totalWidth'));
     mediaCenter(3, $('.catalog__item'), $('.catalog__items'), $('.catalog__mainSection'));
     mediaCenter(4, $('.catalog__item'), $('.catalog__items'), $('.catalog__mainSection--full'));
+
     if ($(window).outerWidth() <= 1023) {
         mediaCenter(8, $('.footer__paymentLink'), $('.footer__paymentLinks'));
     }
@@ -36,6 +38,7 @@ $(window).resize(function() {
     if ($(window).outerWidth() <= 1023) {
         mediaCenter(8, $('.footer__paymentLink'), $('.footer__paymentLinks'));
     }
+    productMoreTableRowColor();
 });
 
 // var catalogFilterBox = function() {
@@ -136,15 +139,28 @@ var productPhotoGalery = function() {
     });
 };
 
-var productMoreTableColumnColor = function() {
+var productMoreTableRowColor = function() {
     var rows = $('.productMore__infoCharacteristicsTableRow');
     var firstColor = '#f4f4f4';
     var secondColor = '#ffffff';
-    for (var i = 0; i < rows.length; i++) {
-        if (i % 2 == 0) {
-            rows.eq(i).css('background-color', firstColor);
-        } else {
-            rows.eq(i).css('background-color', secondColor);
+    var transparent = 'transparent';
+    if ($(window).outerWidth() >= 600) {
+        for (var i = 0; i < rows.length; i++) {
+            if (i % 2 == 0) {
+                rows.eq(i).css('background-color', firstColor);
+            } else {
+                rows.eq(i).css('background-color', secondColor);
+            }
+        }
+    } else {
+        rows.css('background-color', transparent);
+        for (var i = 0; i < rows.length; i++) {
+            if (i === 0) {
+                rows.eq(i).find('.productMore__infoCharacteristicsTableColl').css('background-color', firstColor);
+            } else {
+                rows.eq(i).find('.productMore__infoCharacteristicsTableColl').eq(0).css('background-color', secondColor);
+                rows.eq(i).find('.productMore__infoCharacteristicsTableColl').eq(1).css('background-color', firstColor);
+            }
         }
     }
 };

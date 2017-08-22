@@ -5,17 +5,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 550px;
+    width: 100%;
+    @include w599 {
+        padding: 25px 20px;
+    }
     &Block {
         display: flex;
         min-height: 100vh;
-        height: 100vh;
-        width: 100vw;
+        height: auto;
+        width: 100%;
     }
     &__title {
         margin-bottom: 50px;
+        @include w599 {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
     }
     &__orderNumer {
         margin-bottom: 40px;
+        @include w599 {
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
     }
     &__caption {
         max-width: 410px;
@@ -23,6 +36,10 @@
         margin-bottom: 40px;
         text-align: center;
         line-height: 1.88;
+        @include w599 {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
     }
     &__phone {
         display: flex;
@@ -45,5 +62,6 @@
     &__wait {
         margin-top: 20px;
         margin-bottom: 40px;
+        text-align: center;
     }
 }
