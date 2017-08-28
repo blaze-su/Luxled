@@ -11,6 +11,9 @@
     }
     @include w639 {
         order: 2;
+        max-width: 40px;
+        max-height: 40px;
+        margin-top: -4px;
     }
     &__pic {
         width: 55px;
