@@ -255,6 +255,7 @@
         width: 280px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         position: relative;
         border: solid 0.6px $catalogBorder;
         margin: 0 6px 40px 0px;
@@ -263,9 +264,14 @@
             top: 20px;
             left: 20px;
             color: $catalogGrey;
+            z-index: 1;
         }
         &SalesIndicator {
             height: 5px;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            left: 0;
         }
         &Photo {
             margin: auto;
@@ -277,6 +283,8 @@
                 height: 200px;
                 display: flex;
                 padding: 20px;
+                margin-bottom: 5px;
+                position: relative;
             }
         }
         &Info {
@@ -285,6 +293,8 @@
             min-height: 175px;
             height: auto;
             padding: 20px 20px 0px;
+            flex: 1;
+            justify-content: space-between;
         }
         &Name {
             color: $catalogGrey;
@@ -312,10 +322,12 @@
         }
         &Price {
             font-size: 28px;
+            flex: 3 1;
         }
         &PDF {
-            flex: 1 1;
             text-align: right;
+            margin-left: 15px;
+            max-width: 36px;
             &Link {
                 font-size: 20px;
                 border-bottom: solid 2px $black;

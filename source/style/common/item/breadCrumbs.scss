@@ -3,8 +3,12 @@
     line-height: 1.88;
     color: #757575;
     display: flex;
+    flex-wrap: wrap;
     @include w639 {
         margin: 20px auto !important;
+    }
+    @include w400 {
+        flex-direction: column;
     }
     &__item {
         position: relative;
