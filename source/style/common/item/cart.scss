@@ -5,6 +5,15 @@
     flex-flow: column wrap;
     justify-content: flex-end;
     color: $black;
+    position: relative;
+    &--haveProduct {
+        &>.cart__title {
+            display: none;
+        }
+        &>.cart__number {
+            display: block;
+        }
+    }
     @include w916 {
         max-width: 50px;
         min-width: auto;
@@ -20,16 +29,29 @@
         height: 50px;
         margin-right: 8px;
         flex: 1 1 100%;
+        &:hover {
+            fill: $indigo;
+        }
     }
     &__title {
+        max-width: 85px;
         margin-bottom: 3px;
         @include w916 {
             display: none;
         }
     }
     &__number {
-        @include w916 {
-            display: none;
-        }
+        display: none;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        position: absolute;
+        background-color: red;
+        border-radius: 50%;
+        color: $white;
+        overflow: hidden;
+        left: 33px;
+        bottom: -8px;
     }
 }

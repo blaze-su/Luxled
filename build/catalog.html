@@ -200,7 +200,7 @@
               <svg class="cart__pic">
                 <use xlink:href="assets/img/sprite.svg#shopping-cart"></use>
               </svg>
-              <p class="cart__title">Корзина</p><span class="cart__number">пока пуста</span></a>
+              <p class="cart__title">Корзина пока пуста</p><span class="cart__number"></span></a>
           </div>
         </div>
       </div>
@@ -282,6 +282,17 @@
                   </svg>
                 </div>
                 <div class="catalog__optionsItemList catalog__optionsItemList--squard">
+                  <label class="catalog__optionsItem catalog__optionsItem--slider">
+                    <div class="catalog__optionsAmount">
+                      <div class="catalog__optionsMin">min
+                        <div class="catalog__optionsMinVal"></div>
+                      </div>
+                      <div class="catalog__optionsMax">max
+                        <div class="catalog__optionsMaxVal"></div>
+                      </div>
+                    </div>
+                    <div id="slider-range"></div>
+                  </label>
                   <label class="catalog__optionsItem">
                     <div class="catalog__optionsItemName">цвет</div>
                     <input type="checkbox" name="" value="цвет">

@@ -10,6 +10,7 @@
     "reset-css": "^2.2.1",
     "normalize-css": "^7.0.0",
     "jquery": "^3.2.1",
-    "jquery.maskedinput": "jquery-maskedinput#^1.4.1"
+    "jquery.maskedinput": "jquery-maskedinput#^1.4.1",
+    "swiper": "^3.4.2"
   }
 }

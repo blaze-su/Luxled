@@ -105,6 +105,22 @@
             display: flex !important;
             @extend .catalog__options;
         }
+        &Amount {
+            display: flex;
+            justify-content: space-between;
+            &>div {
+                display: flex;
+                line-height: 20px;
+            }
+            & .catalog__optionsMinVal,
+            .catalog__optionsMaxVal {
+                height: 20px;
+                min-width: 60px;
+                margin-left: 15px;
+                padding: 0 5px;
+                border: solid 1px $catalogBorder;
+            }
+        }
         &Title {
             position: relative;
             &:after {
@@ -120,12 +136,21 @@
             }
         }
         &Item {
-            display: flex;
-            align-items: center;
             padding-left: 22px;
             font-size: 14px;
             position: relative;
             margin-bottom: 10px;
+            &--slider {
+                max-width: 100% !important;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+                margin-right: 0 !important;
+                &:before {
+                    display: none;
+                }
+            }
             &--checked {
                 &:before {
                     border: none;
