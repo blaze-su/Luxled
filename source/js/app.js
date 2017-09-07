@@ -28,7 +28,6 @@ $(document).ready(function() {
         paginationElement: 'li'
     });
     catalogFilterBox();
-    catalogOptionRange('catalog__optionsItemSlider--price', 0, 500);
 });
 
 $(window).resize(function() {
@@ -55,7 +54,7 @@ var catalogFilterBox = function() {
     });
 };
 
-var catalogOptionRange = function(id, start, end, currMin, currMaxm) {
+var catalogOptionRange = function(id, start, end, currMin, currMax) {
     var min = start;
     var max = end;
     var el = $('.' + id);
