@@ -28,6 +28,7 @@ $(document).ready(function() {
         paginationElement: 'li'
     });
     catalogFilterBox();
+    catalogOptionRange(0, 500);
 });
 
 $(window).resize(function() {
