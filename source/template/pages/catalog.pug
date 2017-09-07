@@ -143,10 +143,10 @@ block content
                                         label.catalog__optionsItem.catalog__optionsItem--slider
                                             .catalog__optionsAmount
                                                 .catalog__optionsMin min
-                                                    input(type="text").catalog__optionsMinVal
+                                                    input(type="text" id="minCost").catalog__optionsMinVal
                                                 .catalog__optionsMax max
-                                                    input(type="text").catalog__optionsMaxVal
-                                            #slider-range
+                                                    input(type="text" id="maxCost").catalog__optionsMaxVal
+                                            #slider
                                         each m in o.subMenuOptions
                                             //- name and value задавать програмно backend
                                             label.catalog__optionsItem
