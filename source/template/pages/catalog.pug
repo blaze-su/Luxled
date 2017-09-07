@@ -141,12 +141,12 @@ block content
                                 if key == 0
                                     .catalog__optionsItemList.catalog__optionsItemList--squard
                                         label.catalog__optionsItem.catalog__optionsItem--slider
-                                            div.catalog__optionsAmount
-                                                div.catalog__optionsMin min
-                                                    div.catalog__optionsMinVal
-                                                div.catalog__optionsMax max
-                                                    div.catalog__optionsMaxVal
-                                            div#slider-range
+                                            .catalog__optionsAmount
+                                                .catalog__optionsMin min
+                                                    input(type="text").catalog__optionsMinVal
+                                                .catalog__optionsMax max
+                                                    input(type="text").catalog__optionsMaxVal
+                                            #slider-range
                                         each m in o.subMenuOptions
                                             //- name and value задавать програмно backend
                                             label.catalog__optionsItem

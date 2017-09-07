@@ -28,7 +28,8 @@ $(document).ready(function() {
         paginationClickable: true,
         paginationElement: 'li'
     });
-    // catalogFilterBox();
+    catalogFilterBox();
+    catalogOptionRange(0, 500, 100, 200);
 });
 
 $(window).resize(function() {
@@ -40,33 +41,85 @@ $(window).resize(function() {
     }
     productMoreTableRowColor();
 });
-// var catalogFilterBox = function() {
-//     $('.catalog__optionsItem').on('click', function() {
-//         var top = $(this).offset().top - $('.catalog__optionItems').offset().top;
-//         $('.catalog__optionFindProductBox').addClass('catalog__optionFindProductBox--active').css('top', top);
-//     });
-// };
 
-$(function() {
-    var min = 0;
-    var max = 500;
-    var minField = $('.catalog__optionsMinVal');
-    var maxField = $('.catalog__optionsMaxVal');
-    minField.text(min);
-    maxField.text(max);
-    $("#slider-range").slider({
-        range: true,
-        min: min,
-        max: max,
-        values: [min, max],
-        slide: function(event, ui) {
-            minField.text(ui.values[0]);
-            maxField.text(ui.values[1]);
+var catalogFilterBox = function() {
+    $('.catalog__optionsItem').on('click', function() {
+        var top = $(this).offset().top - $('.catalog__optionItems').offset().top;
+        $('.catalog__optionFindProductBox').addClass('catalog__optionFindProductBox--active').css('top', top);
+    });
+    $('.catalog__optionsTitleBox').on('click', function() {
+        if (!($(this).children('.accordionIcon').hasClass('accordionIcon--active'))) {
+            $('.catalog__optionFindProductBox').removeClass('catalog__optionFindProductBox--active');
         }
     });
-    $("#amount").val("$" + $("#slider-range").slider("values", 0) +
-        " - $" + $("#slider-range").slider("values", 1));
-});
+};
+
+var catalogOptionRange = function(start, end, currMin, currMax) {
+    var min = start;
+    var max = end;
+    var minField = $('.catalog__optionsMinVal');
+    var maxField = $('.catalog__optionsMaxVal');
+
+    // var blurFunc = function(minV, maxV) {
+    //     maxField.blur(function(minV, maxV) {
+    //         currVal = parseInt($(this).val());
+    //         $("#slider-range").slider({
+    //             range: true,
+    //             min: min,
+    //             max: max,
+    //             values: [minV, currVal],
+    //             slide: function(event, ui) {
+    //                 minField.val(ui.values[0]);
+    //                 maxField.val(ui.values[1]);
+    //             }
+    //         });
+    //     });
+
+    //     minField.blur(function(minV, maxV) {
+    //         currVal = parseInt($(this).val());
+    //         $("#slider-range").slider({
+    //             range: true,
+    //             min: min,
+    //             max: max,
+    //             values: [currVal, maxV],
+    //             slide: function(event, ui) {
+    //                 minField.val(ui.values[0]);
+    //                 maxField.val(ui.values[1]);
+    //             }
+    //         });
+    //     });
+    // };
+
+    if (currMin && currMax) {
+        minField.val(currMin);
+        maxField.val(currMax);
+        $("#slider-range").slider({
+            range: true,
+            min: min,
+            max: max,
+            values: [currMin, currMax],
+            slide: function(event, ui) {
+                minField.val(ui.values[0]);
+                maxField.val(ui.values[1]);
+            }
+        });
+        // blurFunc(currMin, currMax);
+    } else {
+        minField.val(min);
+        maxField.val(max);
+        $("#slider-range").slider({
+            range: true,
+            min: min,
+            max: max,
+            values: [min, max],
+            slide: function(event, ui) {
+                minField.val(ui.values[0]);
+                maxField.val(ui.values[1]);
+            }
+        });
+        // blurFunc(min, max);
+    }
+};
 
 var mediaCenter = function(count, elem, box, boxControlSize) {
     var size;
