@@ -1,6 +1,5 @@
 ;
 $(document).ready(function() {
-    // $('.mainContent').css('min-height', ($(window).outerHeight() - $(".footer").outerHeight()) - $(".header").outerHeight());
     catalogFilters();
     headerMenuItemHover();
     catalogCheckBox();
