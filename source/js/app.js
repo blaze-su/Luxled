@@ -28,7 +28,7 @@ $(document).ready(function() {
         paginationElement: 'li'
     });
     catalogFilterBox();
-    catalogOptionRange(0, 500);
+    catalogOptionRange('catalog__optionsItemSlider--price', 0, 500);
 });
 
 $(window).resize(function() {
@@ -55,46 +55,93 @@ var catalogFilterBox = function() {
     });
 };
 
-var catalogOptionRange = function(start, end, currMin, currMax) {
+var catalogOptionRange = function(id, start, end, currMin, currMaxm) {
     var min = start;
     var max = end;
-    var minField = $('.catalog__optionsMinVal');
-    var maxField = $('.catalog__optionsMaxVal');
+    var el = $('.' + id);
+    var minField = el.prev().find('.catalog__optionsMinVal');
+    var maxField = el.prev().find('.catalog__optionsMaxVal');
+
+    var minFieldFunc = function() {
+        minField.keydown(function() {
+            $(this).keyup(function() {
+                if (parseInt($(this).val()) > parseInt(maxField.val())) {
+                    el.slider("option", "values", [maxField.val(), maxField.val()]);
+                } else {
+                    el.slider("option", "values", [$(this).val(), maxField.val()]);
+                }
+            });
+            $(this).blur(function() {
+                if (parseInt(minField.val()) > parseInt(maxField.val())) {
+                    el.slider("option", "values", [maxField.val(), maxField.val()]);
+                    minField.val(maxField.val());
+                }
+                if (minField.val() == '') {
+                    minField.val(start);
+                }
+            });
+        });
+    };
+
+    var maxFieldFunc = function() {
+        maxField.keydown(function() {
+            $(this).keyup(function() {
+                if (parseInt(minField.val()) > parseInt($(this).val())) {
+                    el.slider("option", "values", [minField.val(), minField.val()]);
+                } else {
+                    el.slider("option", "values", [minField.val(), $(this).val()]);
+                }
+            });
+            $(this).blur(function() {
+                if (parseInt(maxField.val()) < parseInt(minField.val())) {
+                    el.slider("option", "values", [minField.val(), minField.val()]);
+                    maxField.val(minField.val());
+                }
+                if (maxField.val() == '') {
+                    maxField.val(end);
+                }
+            });
+        });
+    };
 
     if (currMin && currMax) {
         minField.val(currMin);
         maxField.val(currMax);
-        $("#slider").slider({
+        el.slider({
             range: true,
             min: min,
             max: max,
             values: [currMin, currMax],
             stop: function(event, ui) {
-                minField.val($("#slider").slider("values", 0));
-                maxField.val($("#slider").slider("values", 1));
+                minField.val(el.slider("values", 0));
+                maxField.val(el.slider("values", 1));
             },
             slide: function(event, ui) {
-                minField.val($("#slider").slider("values", 0));
-                maxField.val($("#slider").slider("values", 1));
+                minField.val(el.slider("values", 0));
+                maxField.val(el.slider("values", 1));
             }
         });
+        minFieldFunc();
+        maxFieldFunc();
     } else {
         minField.val(min);
         maxField.val(max);
-        $("#slider").slider({
+        el.slider({
             range: true,
             min: min,
             max: max,
             values: [min, max],
             stop: function(event, ui) {
-                minField.val($("#slider").slider("values", 0));
-                maxField.val($("#slider").slider("values", 1));
+                minField.val(el.slider("values", 0));
+                maxField.val(el.slider("values", 1));
             },
             slide: function(event, ui) {
-                minField.val($("#slider").slider("values", 0));
-                maxField.val($("#slider").slider("values", 1));
+                minField.val(el.slider("values", 0));
+                maxField.val(el.slider("values", 1));
             }
         });
+        minFieldFunc();
+        maxFieldFunc();
     }
 };
 
