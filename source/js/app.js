@@ -239,10 +239,12 @@ var productPhotoGalery = function() {
 
 var productMoreTableRowColor = function() {
     var rows = $('.productMore__infoCharacteristicsTableRow');
+    var coll = $('.productMore__infoCharacteristicsTableColl');
     var firstColor = '#f4f4f4';
     var secondColor = '#ffffff';
     var transparent = 'transparent';
     if ($(window).outerWidth() >= 600) {
+        coll.css('background-color', transparent);
         for (var i = 0; i < rows.length; i++) {
             if (i % 2 == 0) {
                 rows.eq(i).css('background-color', firstColor);
@@ -396,19 +398,6 @@ var iosSetting = function() {
             picBox = $('.productMore__galeryPictureMainBox');
         if (bW <= 680) {
             picBox.height(bW * 0.65);
-        }
-        // footer
-        var el = $('.footer__paymentLink'),
-            elWidth = el.outerWidth(),
-            elHeight = el.height(),
-            elLength = $('.footer__paymentLink').length - 1,
-            container = $('.footer__paymentLinks'),
-            containerWidth = container.outerWidth();
-        if (elWidth * elLength > containerWidth) {
-            var n = Math.floor(containerWidth / (elWidth * elLength)),
-                needHeight = (Math.floor(elLength / n) + 1) * elHeight;
-
-            container.height(needHeight);
         }
     }
 };

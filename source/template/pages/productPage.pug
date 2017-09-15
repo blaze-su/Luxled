@@ -68,10 +68,11 @@ block content
                             {title: 'Ширина', val: '8 мм'}
                         ]
                     .productMore__infoTab#characteristics
-                        .productMore__infoCharacteristicsTable
-                            .productMore__infoCharacteristicsTableRow
-                                .productMore__infoCharacteristicsTableColl Характеристики
+                        table.productMore__infoCharacteristicsTable
+                            thead
+                                tr.productMore__infoCharacteristicsTableRow
+                                    td.productMore__infoCharacteristicsTableColl Характеристики
                             each i in tableItem
-                                .productMore__infoCharacteristicsTableRow
-                                    .productMore__infoCharacteristicsTableColl= i.title
-                                    .productMore__infoCharacteristicsTableColl= i.val
+                                tr.productMore__infoCharacteristicsTableRow
+                                    td.productMore__infoCharacteristicsTableColl= i.title
+                                    td.productMore__infoCharacteristicsTableColl= i.val
