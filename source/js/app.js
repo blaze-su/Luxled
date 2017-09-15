@@ -1,5 +1,6 @@
 ;
 $(document).ready(function() {
+    iosSetting();
     catalogFilters();
     headerMenuItemHover();
     catalogCheckBox();
@@ -38,6 +39,7 @@ $(window).resize(function() {
         mediaCenter(8, $('.footer__paymentLink'), $('.footer__paymentLinks'));
     }
     productMoreTableRowColor();
+    iosSetting();
 });
 
 var catalogFilterBox = function() {
@@ -385,4 +387,28 @@ var footerMenu = function() {
         }
 
     });
+};
+
+var iosSetting = function() {
+    if ($('html').hasClass('ios')) {
+        // product galery
+        var bW = $('body').outerWidth(),
+            picBox = $('.productMore__galeryPictureMainBox');
+        if (bW <= 680) {
+            picBox.height(bW * 0.65);
+        }
+        // footer
+        var el = $('.footer__paymentLink'),
+            elWidth = el.outerWidth(),
+            elHeight = el.height(),
+            elLength = $('.footer__paymentLink').length - 1,
+            container = $('.footer__paymentLinks'),
+            containerWidth = container.outerWidth();
+        if (elWidth * elLength > containerWidth) {
+            var n = Math.floor(containerWidth / (elWidth * elLength)),
+                needHeight = (Math.floor(elLength / n) + 1) * elHeight;
+
+            container.height(needHeight);
+        }
+    }
 };
