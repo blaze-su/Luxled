@@ -12,8 +12,7 @@
         justify-content: space-between;
         margin-bottom: 60px;
         @include w1023 {
-            flex-direction: column;
-            align-items: center;
+            display: block;
         }
     }
     &__galery {
@@ -22,8 +21,7 @@
         overflow-x: hidden;
         margin-right: 15px;
         @include w1023 {
-            margin-right: 0;
-            margin-bottom: 15px;
+            margin: 0 auto 15px;
         }
         &Picture {
             &Main {
@@ -97,6 +95,7 @@
             border: solid 0.5px $catalogBorder;
             @include w1023 {
                 max-width: 660px;
+                margin: 0 auto;
             }
             &>div {
                 padding: 35px;
@@ -205,6 +204,9 @@
         &Text {
             padding: 0 15px;
             margin-bottom: 60px;
+            @include w680 {
+                padding: 0;
+            }
             &>#description {
                 & p {
                     line-height: 1.88;
@@ -230,6 +232,9 @@
                 max-width: 657px;
                 width: 100%;
                 margin-left: -15px;
+                @include w1023 {
+                    margin-left: 0;
+                }
                 &Row {
                     padding: 0 18px;
                     width: 100%;
