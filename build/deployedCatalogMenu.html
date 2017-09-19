@@ -244,170 +244,615 @@
     </ul>
     <main class="mainContent">
       <div class="menuCatalog totalWidth">
-        <div class="menuCatalog__item">
-          <h3 class="title--md menuCatalog__itemTitle">Ленты LUX smd 3528</h3>
-          <p class="menuCatalog__itemDescription">Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета</p>
-          <div class="menuCatalog__itemMenus">
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
+        <div class="catalog__leftSection catalog__leftSection--filter">
+          <div class="filtersBtn">Фильтры
+            <svg class="filtersBtn__pic">
+              <use xlink:href="assets/img/sprite.svg#list"></use>
+            </svg>
           </div>
+          <form class="catalog__options">
+            <div class="catalog__optionItems">
+              <div class="catalog__optionFindProductBox">
+                <p class="catalog__optionFindProductText">Найдено товаров</p>
+                <div class="catalog__optionFindProductCount">120</div><a class="catalog__optionFindProductShow" href="#">Показать</a>
+              </div>
+              <div class="catalog__option">
+                <div class="catalog__optionsTitleBox">
+                  <p class="catalog__optionsTitle">Цвет свечения</p>
+                  <svg class="accordionIcon">
+                    <use xlink:href="assets/img/sprite.svg#next"></use>
+                  </svg>
+                </div>
+                <div class="catalog__optionsItemList catalog__optionsItemList--squard">
+                  <label class="catalog__optionsItem catalog__optionsItem--slider">
+                    <div class="catalog__optionsAmount">
+                      <div class="catalog__optionsMin">min
+                        <input class="catalog__optionsMinVal" type="text" id="minCost">
+                      </div>
+                      <div class="catalog__optionsMax">max
+                        <input class="catalog__optionsMaxVal" type="text" id="maxCost">
+                      </div>
+                    </div>
+                    <div class="catalog__optionsItemSlider catalog__optionsItemSlider--price"></div>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">цвет</div>
+                    <input type="checkbox" name="" value="цвет">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">цвет</div>
+                    <input type="checkbox" name="" value="цвет">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">цвет</div>
+                    <input type="checkbox" name="" value="цвет">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">цвет</div>
+                    <input type="checkbox" name="" value="цвет">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">цвет</div>
+                    <input type="checkbox" name="" value="цвет">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">цвет</div>
+                    <input type="checkbox" name="" value="цвет">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">цвет</div>
+                    <input type="checkbox" name="" value="цвет">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="catalog__option">
+                <div class="catalog__optionsTitleBox">
+                  <p class="catalog__optionsTitle">Размер светодиодов</p>
+                  <svg class="accordionIcon">
+                    <use xlink:href="assets/img/sprite.svg#next"></use>
+                  </svg>
+                </div>
+                <div class="catalog__optionsItemList">
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="catalog__option">
+                <div class="catalog__optionsTitleBox">
+                  <p class="catalog__optionsTitle">Клас пылвлагозащиты</p>
+                  <svg class="accordionIcon">
+                    <use xlink:href="assets/img/sprite.svg#next"></use>
+                  </svg>
+                </div>
+                <div class="catalog__optionsItemList">
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="catalog__option">
+                <div class="catalog__optionsTitleBox">
+                  <p class="catalog__optionsTitle">Напряжение питания</p>
+                  <svg class="accordionIcon">
+                    <use xlink:href="assets/img/sprite.svg#next"></use>
+                  </svg>
+                </div>
+                <div class="catalog__optionsItemList">
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="catalog__option">
+                <div class="catalog__optionsTitleBox">
+                  <p class="catalog__optionsTitle">Плотность светодиодов</p>
+                  <svg class="accordionIcon">
+                    <use xlink:href="assets/img/sprite.svg#next"></use>
+                  </svg>
+                </div>
+                <div class="catalog__optionsItemList">
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="catalog__option">
+                <div class="catalog__optionsTitleBox">
+                  <p class="catalog__optionsTitle">Потребляемая мощность, Вт</p>
+                  <svg class="accordionIcon">
+                    <use xlink:href="assets/img/sprite.svg#next"></use>
+                  </svg>
+                </div>
+                <div class="catalog__optionsItemList">
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <div class="catalog__option">
+                <div class="catalog__optionsTitleBox">
+                  <p class="catalog__optionsTitle">Ширина ленты, мм</p>
+                  <svg class="accordionIcon">
+                    <use xlink:href="assets/img/sprite.svg#next"></use>
+                  </svg>
+                </div>
+                <div class="catalog__optionsItemList">
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                  <label class="catalog__optionsItem">
+                    <div class="catalog__optionsItemName">какой-то пункт</div>
+                    <input type="checkbox" name="" value="какой-то пункт">
+                    <svg class="catalog__optionsItemCheck">
+                      <use xlink:href="assets/img/sprite.svg#check-square"></use>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__optionBtn">
+              <button class="clear">Очистить</button>
+              <button class="accept">Применить</button>
+            </div>
+          </form>
         </div>
-        <div class="menuCatalog__item">
-          <h3 class="title--md menuCatalog__itemTitle">Ленты LUX smd 3528</h3>
-          <p class="menuCatalog__itemDescription">Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета</p>
-          <div class="menuCatalog__itemMenus">
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
+        <div class="menuCatalog__items">
+          <div class="menuCatalog__item">
+            <h3 class="title--md menuCatalog__itemTitle">Ленты LUX smd 3528</h3>
+            <p class="menuCatalog__itemDescription">Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета</p>
+            <div class="menuCatalog__itemMenus">
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="menuCatalog__item">
-          <h3 class="title--md menuCatalog__itemTitle">Ленты LUX smd 3528</h3>
-          <p class="menuCatalog__itemDescription">Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета</p>
-          <div class="menuCatalog__itemMenus">
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
+          <div class="menuCatalog__item">
+            <h3 class="title--md menuCatalog__itemTitle">Ленты LUX smd 3528</h3>
+            <p class="menuCatalog__itemDescription">Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета</p>
+            <div class="menuCatalog__itemMenus">
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="menuCatalog__item">
-          <h3 class="title--md menuCatalog__itemTitle">Ленты LUX smd 3528</h3>
-          <p class="menuCatalog__itemDescription">Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета</p>
-          <div class="menuCatalog__itemMenus">
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
+          <div class="menuCatalog__item">
+            <h3 class="title--md menuCatalog__itemTitle">Ленты LUX smd 3528</h3>
+            <p class="menuCatalog__itemDescription">Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета</p>
+            <div class="menuCatalog__itemMenus">
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="menuCatalog__item">
-          <h3 class="title--md menuCatalog__itemTitle">Ленты LUX smd 3528</h3>
-          <p class="menuCatalog__itemDescription">Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета</p>
-          <div class="menuCatalog__itemMenus">
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
-            </ul>
-            <ul class="menuCatalog__itemMenu">
-              <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
-            </ul>
+          <div class="menuCatalog__item">
+            <h3 class="title--md menuCatalog__itemTitle">Ленты LUX smd 3528</h3>
+            <p class="menuCatalog__itemDescription">Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета</p>
+            <div class="menuCatalog__itemMenus">
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="menuCatalog__item">
+            <h3 class="title--md menuCatalog__itemTitle">Ленты LUX smd 3528</h3>
+            <p class="menuCatalog__itemDescription">Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета</p>
+            <div class="menuCatalog__itemMenus">
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 24V 30, 60</a></li>
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 36V 120, 3x</a></li>
+              </ul>
+              <ul class="menuCatalog__itemMenu">
+                <li class="menuCatalog__itemMenuItem"><a class="menuCatalog__itemMenuLink" href="#">Открытые RT 12V 60</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

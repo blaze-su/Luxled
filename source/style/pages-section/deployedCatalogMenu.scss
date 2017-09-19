@@ -1,4 +1,8 @@
 .menuCatalog {
+    display: flex;
+    @include w926 {
+        display: block;
+    }
     &__item {
         &Title {
             margin-bottom: 7px;

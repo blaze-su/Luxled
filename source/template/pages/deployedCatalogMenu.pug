@@ -6,52 +6,181 @@ block content
     +breadCrumbs(sequence, 'totalWidth')
 
     main.mainContent
-        -
-            var menuCatalog = {
-                title: 'Ленты LUX smd 3528',
-                prev: 'Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета',
-                menu: [
-                    'Открытые RT 12V 60',
-                    'Открытые RT 24V 30, 60',
-                    'Открытые RT 36V 120, 3x',
-                    'Открытые RT 36V 120, 3x',
-                    'Открытые RT 36V 120, 3x',
-                    'Открытые RT 36V 120, 3x'
-                ]
-            }
-            var menuCatalog__last = {
-                menu_firts: [
-                    'Открытые RT 12V 60',
-                    'Открытые RT 24V 30, 60',
-                    'Открытые RT 36V 120, 3x'
-                ],
-                menu_last: [
-                    'Открытые RT 12V 60'
-                ]
-            }
-
         .menuCatalog.totalWidth
-            - for (var i = 0; i < 5; i++) {
-                .menuCatalog__item
-                    h3.title--md.menuCatalog__itemTitle= menuCatalog.title
-                    p.menuCatalog__itemDescription= menuCatalog.prev
+            .catalog__leftSection.catalog__leftSection--filter
+                .filtersBtn Фильтры
+                    +svgMix('filtersBtn__pic', 'list')
+                -
+                    var options = [
+                        {
+                            title: 'Цвет свечения',
+                            subMenuOptions: [
+                                'цвет',
+                                'цвет',
+                                'цвет',
+                                'цвет',
+                                'цвет',
+                                'цвет',
+                                'цвет'
+                            ]
+                        },
+                        {
+                            title: 'Размер светодиодов',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        },
+                        {
+                            title: 'Клас пылвлагозащиты',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        },
+                        {
+                            title: 'Напряжение питания',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        },
+                        {
+                            title: 'Плотность светодиодов',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        },
+                        {
+                            title: 'Потребляемая мощность, Вт',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        },
+                        {
+                            title: 'Ширина ленты, мм',
+                            subMenuOptions: [
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт',
+                                'какой-то пункт'
+                            ]
+                        }
+                    ]
+                
+                form.catalog__options
+                    .catalog__optionItems
+                        .catalog__optionFindProductBox
+                            p.catalog__optionFindProductText Найдено товаров
+                            .catalog__optionFindProductCount 120
+                            a(href="#").catalog__optionFindProductShow Показать
+                        each o, key in options
+                            .catalog__option
+                                .catalog__optionsTitleBox
+                                    p.catalog__optionsTitle= o.title
+                                    +svgMix('accordionIcon', 'next')
+                                if key == 0
+                                    .catalog__optionsItemList.catalog__optionsItemList--squard
+                                        label.catalog__optionsItem.catalog__optionsItem--slider
+                                            .catalog__optionsAmount
+                                                .catalog__optionsMin min
+                                                    input(type="text" id="minCost").catalog__optionsMinVal
+                                                .catalog__optionsMax max
+                                                    input(type="text" id="maxCost").catalog__optionsMaxVal
+                                            .catalog__optionsItemSlider.catalog__optionsItemSlider--price
+                                        each m in o.subMenuOptions
+                                            //- name and value задавать програмно backend
+                                            label.catalog__optionsItem
+                                                .catalog__optionsItemName= m
+                                                input(type="checkbox" name="" value= m)
+                                                +svgMix('catalog__optionsItemCheck', 'check-square')
+                                else
+                                    .catalog__optionsItemList
+                                        each m in o.subMenuOptions
+                                            //- name and value задавать програмно backend
+                                            label.catalog__optionsItem
+                                                .catalog__optionsItemName= m
+                                                input(type="checkbox" name="" value= m)
+                                                +svgMix('catalog__optionsItemCheck', 'check-square')
+                    .catalog__optionBtn
+                        button.clear Очистить
+                        button.accept Применить
+            
+            -
+                var menuCatalog = {
+                    title: 'Ленты LUX smd 3528',
+                    prev: 'Лента класса LUX на чип-светодиодах smd 3528 (Gold wire 99,99%) с высокой светоотдачей. Медная 2х слойная плата белого цвета',
+                    menu: [
+                        'Открытые RT 12V 60',
+                        'Открытые RT 24V 30, 60',
+                        'Открытые RT 36V 120, 3x',
+                        'Открытые RT 36V 120, 3x',
+                        'Открытые RT 36V 120, 3x',
+                        'Открытые RT 36V 120, 3x'
+                    ]
+                }
+                var menuCatalog__last = {
+                    menu_firts: [
+                        'Открытые RT 12V 60',
+                        'Открытые RT 24V 30, 60',
+                        'Открытые RT 36V 120, 3x'
+                    ],
+                    menu_last: [
+                        'Открытые RT 12V 60'
+                    ]
+                }
+            .menuCatalog__items
+                - for (var i = 0; i < 5; i++) {
+                    .menuCatalog__item
+                        h3.title--md.menuCatalog__itemTitle= menuCatalog.title
+                        p.menuCatalog__itemDescription= menuCatalog.prev
 
-                    if i != 4
-                        .menuCatalog__itemMenus
-                            - for (var j = 0; j < 4; j++) {
+                        if i != 4
+                            .menuCatalog__itemMenus
+                                - for (var j = 0; j < 4; j++) {
+                                    ul.menuCatalog__itemMenu
+                                        each m in menuCatalog.menu
+                                            li.menuCatalog__itemMenuItem
+                                                a(href="#").menuCatalog__itemMenuLink= m
+                                - }
+                        else
+                            .menuCatalog__itemMenus
                                 ul.menuCatalog__itemMenu
-                                    each m in menuCatalog.menu
+                                    each i in menuCatalog__last.menu_firts
                                         li.menuCatalog__itemMenuItem
-                                            a(href="#").menuCatalog__itemMenuLink= m
-                            - }
-                    else
-                        .menuCatalog__itemMenus
-                            ul.menuCatalog__itemMenu
-                                each i in menuCatalog__last.menu_firts
-                                    li.menuCatalog__itemMenuItem
-                                        a(href="#").menuCatalog__itemMenuLink= i
-                            ul.menuCatalog__itemMenu
-                                each j in menuCatalog__last.menu_last
-                                    li.menuCatalog__itemMenuItem
-                                        a(href="#").menuCatalog__itemMenuLink= j
-            - }
+                                            a(href="#").menuCatalog__itemMenuLink= i
+                                ul.menuCatalog__itemMenu
+                                    each j in menuCatalog__last.menu_last
+                                        li.menuCatalog__itemMenuItem
+                                            a(href="#").menuCatalog__itemMenuLink= j
+                - }

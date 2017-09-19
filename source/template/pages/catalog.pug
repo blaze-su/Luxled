@@ -182,29 +182,83 @@ block content
 
                 
 
-                .catalog__items
-                    - for(var i = 0; i< 11; i++) {
-                        .catalog__item
-                            .catalog__itemArticle Артикул 11111
+                //- Было изменено
+                //- .catalog__items
+                //-     - for(var i = 0; i< 11; i++) {
+                //-         .catalog__item
+                //-             .catalog__itemArticle Артикул 11111
 
-                            a(href="#").catalog__itemPhotoBox
-                                img(src="assets/img/catalogProduct.png", alt="product photo").catalog__itemPhoto
-                                .catalog__itemSalesIndicator(style="background-color: #0003ff")
+                //-             a(href="#").catalog__itemPhotoBox
+                //-                 img(src="assets/img/catalogProduct.png", alt="product photo").catalog__itemPhoto
+                //-                 .catalog__itemSalesIndicator(style="background-color: #0003ff")
                             
-                            .catalog__itemInfo
-                                .catalog__itemInfoTopBox
-                                    .catalog__itemName Лента светодиодная
-                                    a(href="#").catalog__itemModel RT 2-5000 12V Yellow
+                //-             .catalog__itemInfo
+                //-                 .catalog__itemInfoTopBox
+                //-                     .catalog__itemName Лента светодиодная
+                //-                     a(href="#").catalog__itemModel RT 2-5000 12V Yellow
 
-                                .catalog__itemDetail
-                                    block counter
-                                        include ../common/counter
-                                    .catalog__itemBuy
-                                        button.catalog__itemBuyBtn В корзину
-                                    .catalog__itemPrice 99,99 ₽
+                //-                 .catalog__itemDetail
+                //-                     block counter
+                //-                         include ../common/counter
+                //-                     .catalog__itemBuy
+                //-                         button.catalog__itemBuyBtn В корзину
+                //-                     .catalog__itemPrice 99,99 ₽
                                         
-                                    .catalog__itemPDF
-                                        a(href="#").catalog__itemPDFLink PDF
+                //-                     .catalog__itemPDF
+                //-                         a(href="#").catalog__itemPDFLink PDF
+                //-     - }
+                .catalog__items
+                    - for(var i = 0; i< 5; i++) {
+                        .catalog__item
+                            a(href="#").catalog__itemName Лента RT 2-5000 12V S-Cool-5mm (3528, 300 LED, LUX)
+                            .catalog__itemInfoBox
+                                .catalog__itemPhotoBox
+                                    a(href="#").catalog__itemPhotoLink
+                                        img(src="assets/img/catalogProduct.png", alt="product photo").catalog__itemPhoto
+                                .catalog__itemInfoTable
+                                    .catalog__itemTableColl.catalog__itemTableColl--article
+                                        .catalog__itemTableHead Артикул
+                                        .catalog__itemTableContent
+                                            p 111111111
+                                            a(href="#").catalog__itemPdfLink
+                                                img(src="assets/img/PDF-downlaod.png", alt="pdf article").catalog__itemPdf
+                                    .catalog__itemTableColl.catalog__itemTableColl--description
+                                        .catalog__itemTableHead Описание
+                                        .catalog__itemTableContent
+                                            p.
+                                                Упаковка: Катушка. Узкая гибкая лента LUX,
+                                                светодиоды smd 3528, 60шт/м (300шт на 5м)
+                                                белая плата 5мм, скотч 3М. Цвет ХОЛОДНЫЙ
+                                                БЕЛЫЙ 15000-20000К. Питание 12В,
+                                                мощьность 4,8 Вт/м (24 Вт на 5м), угол 120º
+                                                Размеры 5000х5х1,8мм. Мин. отрезок 50мм
+                                                (3 LED). Цена 1м
+                                    .catalog__itemTableColl.catalog__itemTableColl--color
+                                        .catalog__itemTableHead Цвет
+                                        .catalog__itemTableContent
+                                            //- цвет через админку
+                                            div(style="background-color: yellow")
+                                    .catalog__itemTableColl.catalog__itemTableColl--packingRate
+                                        .catalog__itemTableHead Норма упак.
+                                        .catalog__itemTableContent
+                                            p 5
+                                    .catalog__itemTableColl.catalog__itemTableColl--units
+                                        .catalog__itemTableHead Ед. изм.
+                                        .catalog__itemTableContent
+                                            p М
+                                    .catalog__itemTableColl.catalog__itemTableColl--price
+                                        .catalog__itemTableHead Цена
+                                        .catalog__itemTableContent
+                                            p 1 000 000.00 Р
+                                    .catalog__itemTableColl.catalog__itemTableColl--amount
+                                        .catalog__itemTableHead Кол-во
+                                        .catalog__itemTableContent
+                                            input(type="text" value=0)
+                                    .catalog__itemTableColl.catalog__itemTableColl--availability
+                                        .catalog__itemTableHead Наличие
+                                        .catalog__itemTableContent
+                                            .check
                     - }
+                    
                 block pagination
                     include ../common/_pagination

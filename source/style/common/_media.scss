@@ -41,6 +41,12 @@
     }
 }
 
+@mixin w767() {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
 @mixin w640() {
     @media only screen and (max-width: 640px) {
         @content;
