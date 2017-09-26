@@ -399,6 +399,13 @@
             @include w1216 {
                 display: none;
             }
+            & .catalog__itemBuyBtn {
+                @extend .button--indigo;
+                position: absolute;
+                padding: 6px 12.485px;
+                right: 0;
+                bottom: 0;
+            }
             & .catalog {
                 &__item {
                     width: 100%;
@@ -420,7 +427,8 @@
                             display: flex;
                         }
                         &Table {
-                            display: flex;                            
+                            display: flex;
+                            position: relative;
                             &>div {
                                 &:last-child {
                                     &>.catalog__itemTableHead {
