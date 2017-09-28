@@ -217,6 +217,27 @@
                     }
                 }
             }
+            &Models {
+                &Box {
+                    display: none;
+                    flex-wrap: wrap;
+                }
+            }
+            &Model {
+                display: flex;
+                margin-bottom: 10px;
+                &Link {
+                    text-align: center;
+                    padding: 3px 5px;
+                    flex: 1;
+                    &--active {
+                        border-bottom: 1px solid $black;
+                    }
+                    &:hover {
+                        border-bottom: 1px solid $black;
+                    }
+                }
+            }
         }
     }
     &__mainSection {

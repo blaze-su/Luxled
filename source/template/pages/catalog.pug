@@ -153,6 +153,24 @@ block content
                                                 .catalog__optionsItemName= m
                                                 input(type="checkbox" name="" value= m)
                                                 +svgMix('catalog__optionsItemCheck', 'check-square')
+                                if key == 1
+                                    .catalog__optionsItemList
+                                        .catalog__optionsItemModels
+                                            .catalog__optionsItemModel
+                                                a(href="model1").catalog__optionsItemModelLink.catalog__optionsItemModelLink--active модель 1
+                                                a(href="model2").catalog__optionsItemModelLink модель 2
+                                            .catalog__optionsItemModelsBox#model1
+                                                each m in o.subMenuOptions
+                                                    label.catalog__optionsItem
+                                                        .catalog__optionsItemName= m + " model 1"
+                                                        input(type="checkbox" name="" value= m)
+                                                        +svgMix('catalog__optionsItemCheck', 'check-square')
+                                            .catalog__optionsItemModelsBox#model2
+                                                each m in o.subMenuOptions
+                                                    label.catalog__optionsItem
+                                                        .catalog__optionsItemName= m + " model 2"
+                                                        input(type="checkbox" name="" value= m)
+                                                        +svgMix('catalog__optionsItemCheck', 'check-square')
                                 else
                                     .catalog__optionsItemList
                                         each m in o.subMenuOptions
