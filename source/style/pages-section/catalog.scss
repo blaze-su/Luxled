@@ -151,6 +151,7 @@
             font-size: 14px;
             position: relative;
             margin-bottom: 10px;
+            width: 100%;
             &--slider {
                 max-width: 100% !important;
                 width: 100%;
@@ -173,12 +174,13 @@
             &:before {
                 content: '';
                 position: absolute;
-                top: 2px;
+                top: 50%;
                 left: 0;
                 width: 10px;
                 height: 10px;
                 background-color: transparent;
                 border: 1px solid $black;
+                transform: translateY(-50%);
             }
             &Check {
                 position: absolute;
@@ -213,14 +215,20 @@
                         &Name {
                             width: 30px;
                             height: 15px;
+                            padding: 0 !important;
+                            overflow: hidden;
                         }
                     }
                 }
+            }
+            &Name {
+                padding: 2px 5px;
             }
             &Models {
                 &Box {
                     display: none;
                     flex-wrap: wrap;
+
                 }
             }
             &Model {
