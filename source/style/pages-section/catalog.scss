@@ -184,11 +184,13 @@
             }
             &Check {
                 position: absolute;
-                top: 0;
+                top: 50%;
                 left: 0;
                 width: 14px;
                 height: 14px;
+                transform: translateY(-57%);
                 display: none;
+
             }
             &>input {
                 display: none;
