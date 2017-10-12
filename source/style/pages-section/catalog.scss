@@ -559,4 +559,12 @@
             }
         }
     }
+    &__item{
+        &Info{
+            &Table{
+                flex: 1;
+                min-height: 115px;
+            }
+        }
+    }
 }
