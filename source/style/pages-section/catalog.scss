@@ -347,10 +347,13 @@
                     position: relative;
                     border: solid 0.6px $catalogBorder;
                     margin: 0 3px 40px;
+                    &TopBox {
+                        position: relative;
+                    }
                     &Article {
                         position: absolute;
-                        top: 20px;
-                        left: 20px;
+                        top: 10px;
+                        left: 10px;
                         color: $catalogGrey;
                         z-index: 1;
                     }
@@ -370,9 +373,32 @@
                             max-height: 200px;
                             height: 200px;
                             display: flex;
-                            padding: 20px;
+                            padding: 10px 10px 20px;
                             margin-bottom: 5px;
                             position: relative;
+                        }
+                    }
+                    &Check {
+                        position: absolute;
+                        right: 10px;
+                        bottom: 13px;
+                        max-width: 30px;
+                        max-height: 30px;
+                        & .check {
+                            max-width: 30px;
+                            max-height: 30px;
+                        }
+                    }
+                    &Color {
+                        display: flex;
+                        flex-wrap: wrap;
+                        position: absolute;
+                        left: 10px;
+                        bottom: 13px;
+                        & > div {
+                            width: 37px;
+                            height: 17px;
+                            border: 1px solid $catalogBorder;
                         }
                     }
                     &Info {
@@ -380,7 +406,7 @@
                         flex-direction: column;
                         min-height: 175px;
                         height: auto;
-                        padding: 20px 20px 0px;
+                        padding: 20px 10px 0px;
                         flex: 1;
                         justify-content: space-between;
                     }
@@ -390,6 +416,14 @@
                     }
                     &Model {
                         font-size: 14px;
+                        font-weight: bold;
+                        margin-bottom: 15px;
+                        display: block;
+                    }
+                    &Description {
+                        font-size: 14px;
+                        color: $catalogGrey;
+                        line-height: 1.3;
                     }
                     &Detail {
                         margin-top: 30px;
@@ -460,6 +494,8 @@
                         &Table {
                             display: flex;
                             position: relative;
+                            flex: 1;
+                            min-height: 115px;
                             &>div {
                                 &:last-child {
                                     &>.catalog__itemTableHead {
@@ -556,14 +592,6 @@
                         }
                     }
                 }
-            }
-        }
-    }
-    &__item{
-        &Info{
-            &Table{
-                flex: 1;
-                min-height: 115px;
             }
         }
     }

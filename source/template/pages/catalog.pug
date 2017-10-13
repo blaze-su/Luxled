@@ -201,17 +201,27 @@ block content
                 .catalog__items--laptop
                     - for(var i = 0; i< 11; i++) {
                         .catalog__item
-                            .catalog__itemArticle Артикул 11111
+                            .catalog__itemTopBox
+                                .catalog__itemArticle Артикул 11111
 
-                            a(href="#").catalog__itemPhotoBox
-                                img(src="assets/img/catalogProduct.png", alt="product photo").catalog__itemPhoto
-                                .catalog__itemSalesIndicator(style="background-color: #0003ff")
+                                a(href="#").catalog__itemPhotoBox
+                                    img(src="assets/img/catalogProduct.png", alt="product photo").catalog__itemPhoto
+                                    .catalog__itemSalesIndicator(style="background-color: #0003ff")
+
+                                .catalog__itemColor
+                                    div(style="background-color: red")
+                                
+                                .catalog__itemCheck
+                                    +svgMix('check', 'catalogCheck')
                             
                             .catalog__itemInfo
                                 .catalog__itemInfoTopBox
-                                    .catalog__itemName Лента светодиодная
-                                    a(href="#").catalog__itemModel RT 2-5000 12V Yellow
-
+                                    //- удалено заказчиком
+                                    //- .catalog__itemName Лента светодиодная
+                                    a(href="#").catalog__itemModel Лента светодиодная RT 2-5000 12V Yellow
+                                    //- Добавленно описание
+                                    .catalog__itemDescription.
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam tenetur quae tempore, aperiam dolore aliquam nemo quia officia tempora quod architecto quos nulla quibusdam amet hic voluptatem doloremque dignissimos a!
                                 .catalog__itemDetail
                                     block counter
                                         include ../common/counter
