@@ -44,13 +44,13 @@ block content
                         {
                             title: 'Цвет свечения',
                             subMenuOptions: [
-                                'цвет',
-                                'цвет',
-                                'цвет',
-                                'цвет',
-                                'цвет',
-                                'цвет',
-                                'цвет'
+                                'цвет цвет цвет цвет цвет ',
+                                '11',
+                                '11',
+                                '11',
+                                'gsdgfsdjflhdh hdh jk jksakn',
+                                '11',
+                                '11'
                             ]
                         },
                         {
@@ -139,7 +139,7 @@ block content
                                     p.catalog__optionsTitle= o.title
                                     +svgMix('accordionIcon', 'next')
                                 if key == 0
-                                    .catalog__optionsItemList.catalog__optionsItemList--squard
+                                    .catalog__optionsItemList.catalog__optionsItemList--coll4
                                         label.catalog__optionsItem.catalog__optionsItem--slider
                                             .catalog__optionsAmount
                                                 .catalog__optionsMin min
@@ -206,21 +206,12 @@ block content
 
                                 a(href="#").catalog__itemPhotoBox
                                     img(src="assets/img/catalogProduct.png", alt="product photo").catalog__itemPhoto
-                                    .catalog__itemSalesIndicator(style="background-color: #0003ff")
 
                                 .catalog__itemColor
                                     div(style="background-color: red")
-                                    div(style="background-color: green")
-                                    div(style="background-color: blue")
-                                    div(style="background-color: red")
-                                    div(style="background-color: green")
-                                    div(style="background-color: blue")
-                                    div(style="background-color: red")
-                                    div(style="background-color: green")
-                                    div(style="background-color: blue")
                                 
                                 .catalog__itemCheck
-                                    +svgMix('check', 'catalogCheck')
+                                    +svgMix('check', 'inStock')
                             
                             .catalog__itemInfo
                                 .catalog__itemInfoTopBox
@@ -246,54 +237,60 @@ block content
                     - for(var i = 0; i< 5; i++) {
                         .catalog__item
                             a(href="#").catalog__itemName Лента RT 2-5000 12V S-Cool-5mm (3528, 300 LED, LUX)
-                            .catalog__itemInfoBox
-                                .catalog__itemPhotoBox
-                                    a(href="#").catalog__itemPhotoLink
-                                        img(src="assets/img/catalogProduct.png", alt="product photo").catalog__itemPhoto
-                                .catalog__itemInfoTable
-                                    .catalog__itemTableColl.catalog__itemTableColl--article
-                                        .catalog__itemTableHead Артикул
-                                        .catalog__itemTableContent
-                                            p 111111111
-                                            a(href="#").catalog__itemPdfLink
-                                                img(src="assets/img/PDF-downlaod.png", alt="pdf article").catalog__itemPdf
-                                    .catalog__itemTableColl.catalog__itemTableColl--description
-                                        .catalog__itemTableHead Описание
-                                        .catalog__itemTableContent
-                                            p.
-                                                Упаковка: Катушка. Узкая гибкая лента LUX,
-                                                светодиоды smd 3528, 60шт/м (300шт на 5м)
-                                                белая плата 5мм, скотч 3М. Цвет ХОЛОДНЫЙ
-                                                БЕЛЫЙ 15000-20000К. Питание 12В,
-                                                мощьность 4,8 Вт/м (24 Вт на 5м), угол 120º
-                                                Размеры 5000х5х1,8мм. Мин. отрезок 50мм
-                                                (3 LED). Цена 1м
-                                    .catalog__itemTableColl.catalog__itemTableColl--color
-                                        .catalog__itemTableHead Цвет
-                                        .catalog__itemTableContent
-                                            //- цвет через админку
-                                            div(style="background-color: yellow")
-                                    .catalog__itemTableColl.catalog__itemTableColl--packingRate
-                                        .catalog__itemTableHead Норма упак.
-                                        .catalog__itemTableContent
-                                            p 5
-                                    .catalog__itemTableColl.catalog__itemTableColl--units
-                                        .catalog__itemTableHead Ед. изм.
-                                        .catalog__itemTableContent
-                                            p М
-                                    .catalog__itemTableColl.catalog__itemTableColl--price
-                                        .catalog__itemTableHead Цена
-                                        .catalog__itemTableContent
-                                            p 1 000 000.00 Р
-                                    .catalog__itemTableColl.catalog__itemTableColl--amount
-                                        .catalog__itemTableHead Кол-во
-                                        .catalog__itemTableContent
-                                            input(type="text" value=0)
-                                    .catalog__itemTableColl.catalog__itemTableColl--availability
-                                        .catalog__itemTableHead Наличие
-                                        .catalog__itemTableContent
-                                            +svgMix('check', 'catalogCheck')
-                                    button.catalog__itemBuyBtn В корзину
+                            .catalog__itemInfoTable
+                                .catalog__itemTableColl.catalog__itemTableColl--article
+                                    .catalog__itemTableHead Артикул
+                                    .catalog__itemTableContent
+                                        p 111111111
+                                .catalog__itemTableColl.catalog__itemTableColl--photo
+                                    .catalog__itemTableHead Фото
+                                    .catalog__itemTableContent
+                                        a(href="#").catalog__itemPhotoLink
+                                            img(src="assets/img/catalogProduct.png", alt="product photo").catalog__itemPhoto
+                                .catalog__itemTableColl.catalog__itemTableColl--pdf
+                                    .catalog__itemTableHead PDF
+                                    .catalog__itemTableContent
+                                        a(href="#").catalog__itemPdfLink
+                                            img(src="assets/img/PDF-downlaod.png", alt="pdf article").catalog__itemPdf
+                                .catalog__itemTableColl.catalog__itemTableColl--description
+                                    .catalog__itemTableHead Описание
+                                    .catalog__itemTableContent
+                                        p.
+                                            Упаковка: Катушка. Узкая гибкая лента LUX,
+                                            светодиоды smd 3528, 60шт/м (300шт на 5м)
+                                            белая плата 5мм, скотч 3М. Цвет ХОЛОДНЫЙ
+                                            БЕЛЫЙ 15000-20000К. Питание 12В,
+                                            мощьность 4,8 Вт/м (24 Вт на 5м), угол 120º
+                                            Размеры 5000х5х1,8мм. Мин. отрезок 50мм
+                                            (3 LED). Цена 1м
+                                .catalog__itemTableColl.catalog__itemTableColl--color
+                                    .catalog__itemTableHead Цвет
+                                    .catalog__itemTableContent
+                                        //- цвет через админку
+                                        div(style="background-color: yellow")
+                                .catalog__itemTableColl.catalog__itemTableColl--packingRate
+                                    .catalog__itemTableHead Норма упак.
+                                    .catalog__itemTableContent
+                                        p 5
+                                .catalog__itemTableColl.catalog__itemTableColl--units
+                                    .catalog__itemTableHead Ед. изм.
+                                    .catalog__itemTableContent
+                                        p М
+                                .catalog__itemTableColl.catalog__itemTableColl--price
+                                    .catalog__itemTableHead Цена
+                                    .catalog__itemTableContent
+                                        p 1 000 000.00 Р
+                                .catalog__itemTableColl.catalog__itemTableColl--amount
+                                    .catalog__itemTableHead Заказ
+                                    .catalog__itemTableContent
+                                        block counter
+                                            include ../common/counter
+                                .catalog__itemTableColl.catalog__itemTableColl--availability
+                                    .catalog__itemTableHead Наличие
+                                    .catalog__itemTableContent
+                                        //- если есть в наличии вместо notStock ставим inStock
+                                        +svgMix('check', 'notStock')
+                                button.catalog__itemBuyBtn В корзину
                     - }
                     
                 block pagination
