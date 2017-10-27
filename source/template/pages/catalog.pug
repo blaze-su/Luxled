@@ -184,6 +184,21 @@ block content
                         button.accept Применить
 
             .catalog__mainSection
+                ul.catalog__designations
+                    li.catalog__designationsItem
+                        | Обозначения: в наличии-
+                        span
+                            +svgMix('check', 'inStock')
+                    li.catalog__designationsItem
+                        | / ожидается-
+                        span
+                            +svgMix('check', 'notStock')
+                    li.catalog__designationsItem
+                        | / добавить в заказ-
+                        span +
+                    li.catalog__designationsItem
+                        | / убрать из заказа-
+                        span -
                 .catalog__sorting
                     p.catalog__sortingText Сортирвать:
                     .catalog__sortingMenu

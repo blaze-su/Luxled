@@ -133,6 +133,7 @@
         }
         &Title {
             position: relative;
+            padding-right: 15px;
             &:after {
                 content: '';
                 position: absolute;
@@ -435,11 +436,7 @@
                         font-size: 14px;
                         margin-bottom: 0 !important;
                         @include w400 {
-                            max-width: 100%;
-                            flex: 1 1 100% !important;
-                            margin-bottom: 20px !important;
-                            text-align: left;
-                            order: -1;
+                            max-width: 33%;
                         }
                     }
                     &Detail {
@@ -452,13 +449,22 @@
                             flex: 1 1 50%;
                             margin-bottom: 17px;
                         }
+                        & .counter__box {
+                            @include w400 {
+                                max-width: 33%;
+                            }
+                        }
                     }
                     &Buy {
                         text-align: right;
                         max-width: 100px;
+                        @include w400 {
+                            max-width: 33%;
+                        }
                         &Btn {
                             @extend .button--indigo;
-                            padding: 6px 12.485px;
+                            padding: 6px;
+                            width: 100%;
                         }
                     }
                     &Price {
@@ -604,7 +610,6 @@
                                     text-align: center;
                                 }
                             }
-                            &--units {}
                             &--price {
                                 white-space: nowrap;
                             }
@@ -622,15 +627,6 @@
                                     min-width: 90px;
                                     border: none;
                                 }
-                                & .counter__quantity {
-                                    color: $indigo;
-                                    &:first-child {
-                                        font-size: 32px;
-                                    }
-                                    &:last-child {
-                                        font-size: 22px;
-                                    }
-                                }
                             }
                             &--availability {
                                 & .check {
@@ -639,10 +635,36 @@
                                     margin: 0 auto;
                                     display: block;
                                 }
+                                &>.catalog__itemTableHead {
+                                    border-right: none;
+                                }
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+    &__designations {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        &Item {
+            display: flex;
+            align-items: center;
+            margin: 3px 0;
+            @include w400 {
+                width: 100%;
+            }
+        }
+        & span {
+            color: $indigo;
+            font-size: 22px;
+            display: inline-flex;
+            margin: 0 5px;
+            & svg {
+                max-width: 20px;
+                max-height: 20px;
             }
         }
     }
