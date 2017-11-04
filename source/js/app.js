@@ -7,17 +7,14 @@ $(document).ready(function() {
     catalogCheckBox();
     catalogAccordion();
     catalogSorting();
-    productPhotoGalery();
     productMoreTableRowColor();
     catalogTableHeadHeight();
-    productMoreTab();
     catalogOptionsTab(2);
     orderForm();
     footerMenu();
     $('img').on('mousedown', function(e) { e.preventDefault(); });
     hScroll($('.header__catalogItem'), $('.header__catalog'));
     hScroll($('.portfolio__item'), $('.portfolio__itemBox'));
-    hScroll($('.productMore__galeryPictureOtherCase '), $('.productMore__galeryPictureOtherBox'));
 
     mediaCenter(5, $('.whyWe__belief'), $('.whyWe__beliefs'), $('.totalWidth'));
     if ($(window).outerWidth() <= 926) {
@@ -247,29 +244,13 @@ var hScroll = function(el, elB) {
     });
 };
 
-var productPhotoGalery = function() {
-    var firstSrc = $('.productMore__galeryPictureOther').eq(0).attr('src');
-    $('.productMore__galeryPictureMain').attr('src', firstSrc);
-    $('.productMore__galeryPictureOtherCase').eq(0).addClass('productMore__galeryPictureOtherCase--active');
-    $('.productMore__galeryPictureOther').on('click', function() {
-
-        var needSrc = $(this).attr('src');
-        $('.productMore__galeryPictureMain').attr('src', needSrc);
-
-        $('.productMore__galeryPictureOtherCase--active').removeClass('productMore__galeryPictureOtherCase--active');
-
-        $(this).closest('.productMore__galeryPictureOtherCase').addClass('productMore__galeryPictureOtherCase--active');
-
-    });
-};
-
 var productMoreTableRowColor = function() {
-    var rows = $('.productMore__infoCharacteristicsTableRow');
-    var coll = $('.productMore__infoCharacteristicsTableColl');
+    var rows = $('.productMore__characteristicsTableRow');
+    var coll = $('.productMore__characteristicsTableColl');
     var firstColor = '#f4f4f4';
     var secondColor = '#ffffff';
     var transparent = 'transparent';
-    if ($(window).outerWidth() >= 600) {
+    if ($(window).outerWidth() >= 1144 || ($(window).outerWidth() >= 600 && $(window).outerWidth() <= 1023)) {
         coll.css('background-color', transparent);
         for (var i = 0; i < rows.length; i++) {
             if (i % 2 == 0) {
@@ -282,40 +263,13 @@ var productMoreTableRowColor = function() {
         rows.css('background-color', transparent);
         for (var i = 0; i < rows.length; i++) {
             if (i === 0) {
-                rows.eq(i).find('.productMore__infoCharacteristicsTableColl').css('background-color', firstColor);
+                rows.eq(i).find('.productMore__characteristicsTableColl').css('background-color', secondColor);
             } else {
-                rows.eq(i).find('.productMore__infoCharacteristicsTableColl').eq(0).css('background-color', secondColor);
-                rows.eq(i).find('.productMore__infoCharacteristicsTableColl').eq(1).css('background-color', firstColor);
+                rows.eq(i).find('.productMore__characteristicsTableColl').eq(0).css('background-color', firstColor);
+                rows.eq(i).find('.productMore__characteristicsTableColl').eq(1).css('background-color', secondColor);
             }
         }
     }
-};
-
-var productMoreTab = function() {
-    var tabs = $('.productMore__infoTab');
-    var links = $('.productMore__infoMenuLink');
-
-    links.on('click', function(e) {
-        e.preventDefault();
-        $('.productMore__infoMenuLink--active').removeClass('productMore__infoMenuLink--active')
-        $(this).addClass('productMore__infoMenuLink--active');
-        var path = $(this).attr('href');
-        tabs.each(function(index) {
-            if (tabs.eq(index).attr('id') === path) {
-                tabs.css('display', 'none');
-                $(this).css('display', 'block');
-            }
-        });
-    });
-
-    tabs.eq(0).css('display', 'block');
-    var tabId0 = tabs.eq(0).attr('id');
-
-    links.each(function(index) {
-        if (links.eq(index).attr('href') === tabId0) {
-            $(this).addClass('productMore__infoMenuLink--active');
-        }
-    });
 };
 
 var catalogOptionsTab = function(start) {
@@ -513,7 +467,6 @@ var footerMenu = function() {
 
 var iosSetting = function() {
     if ($('html').hasClass('ios')) {
-        // product galery
         var bW = $('body').outerWidth(),
             picBox = $('.productMore__galeryPictureMainBox');
         if (bW <= 680) {

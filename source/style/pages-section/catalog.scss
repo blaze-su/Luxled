@@ -112,6 +112,7 @@
         }
         &--active {
             display: flex !important;
+            margin-bottom: 25px;
             @extend .catalog__options;
         }
         &Amount {

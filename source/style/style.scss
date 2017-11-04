@@ -156,3 +156,9 @@ body {
     outline: none;
     transform: translate(-50%, -50%);
 }
+
+.mobile {
+    & .header__menuList--full {
+        min-width: calc(100vw - 30px);
+    }
+}
