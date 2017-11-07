@@ -158,6 +158,14 @@
             max-width: 100%;
             margin-bottom: 40px;
         }
+        &>thead {
+            &>.productMore__characteristicsTableRow {
+                font-size: 20px;
+                @include w768 {
+                    font-size: 18px;
+                }
+            }
+        }
         &>* {
             display: block;
         }

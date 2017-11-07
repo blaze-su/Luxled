@@ -262,12 +262,8 @@ var productMoreTableRowColor = function() {
     } else {
         rows.css('background-color', transparent);
         for (var i = 0; i < rows.length; i++) {
-            if (i === 0) {
-                rows.eq(i).find('.productMore__characteristicsTableColl').css('background-color', secondColor);
-            } else {
-                rows.eq(i).find('.productMore__characteristicsTableColl').eq(0).css('background-color', firstColor);
-                rows.eq(i).find('.productMore__characteristicsTableColl').eq(1).css('background-color', secondColor);
-            }
+            rows.eq(i).find('.productMore__characteristicsTableColl').eq(0).css('background-color', firstColor);
+            rows.eq(i).find('.productMore__characteristicsTableColl').eq(1).css('background-color', secondColor);
         }
     }
 };
@@ -294,7 +290,7 @@ var catalogOptionsTab = function(start) {
 
     links.each(function(index) {
         if (links.eq(index).attr('href') === tabId0) {
-            $('.catalog__optionsItemModelLink--active').removeClass('catalog__optionsItemModelLink--active')
+            $('.catalog__optionsItemModelLink--active').removeClass('catalog__optionsItemModelLink--active');
             $(this).addClass('catalog__optionsItemModelLink--active');
         }
     });

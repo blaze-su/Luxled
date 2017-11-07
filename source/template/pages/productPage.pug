@@ -29,24 +29,34 @@ block content
                 table.productMore__characteristics
                     -
                         var tableItem = [
-                            {title: 'Корпус (форма)', val: 'Открытый'},
-                            {title: 'Класс пыле-влагозащиты', val: 'IP20'},
-                            {title: 'Размер (тип) светодиода 3528', val: '\(3.5x2.8мм\)'},
-                            {title: 'Плотность светодиодов', val: '60'},
-                            {title: 'Напряжение питания, В', val: '12'},
-                            {title: 'Угол обзора, гр', val: '120'},
-                            {title: 'Мощность, Вт', val: '24'},
-                            {title: 'Световой поток, Лм', val: '900 / 1200'},
-                            {title: 'Артикул	N70024', val: 'Цветовая температура, K3200'},
-                            {title: 'Количество светодиодов', val: '300 шт'},
-                            {title: 'Длина', val: '5 000 мм'},
-                            {title: 'Цвет свечения', val: 'Белый (теплый)'},
-                            {title: 'Потребляемый ток, А', val: 'typ: 2 A'},
-                            {title: 'Ширина', val: '8 мм'}
+                            {title: "Артикул", val: "019916"},
+                            {title: "Цвет", val: "Белый  (холодный)"},
+                            {title: "Тип товара", val: "Лента"},
+                            {title: "Цветовая температура", val: "min: 8 000 K; max: 9 000 K"},
+                            {title: "Световой поток, общий", val: "max: 1 270 lm"},
+                            {title: "Световой поток, 1м", val: "max: 250 lm/m"},
+                            {title: "Угол обзора", val: "120 °"},
+                            {title: "Напряжение питания", val: "24 V"},
+                            {title: "Кол-во светодиодов", val: "150 шт"},
+                            {title: "Максимальная мощность", val: "15 W"},
+                            {title: "Размер светодиода", val: "3528 (3.5x2.8мм)"},
+                            {title: "Плотность светодиодов", val: "30 шт/м"},
+                            {title: "Длина", val: "5 000 мм"},
+                            {title: "Высота", val: "2 мм"},
+                            {title: "Минимальный отрезок", val: "167 мм"},
+                            {title: "Ширина", val: "8 мм"},
+                            {title: "Потребляемый ток", val: "typ: 0,6 A"},
+                            {title: "Индекс цветопередачи", val: ">85"},
+                            {title: "Класс пылевлагозащиты", val: "IP33"},
+                            {title: "Потребляемая мощность, общая", val: "min: 12,5 W; max: 15 W"},
+                            {title: "Потребляемая мощность, 1м", val: "min: 2,5 W/m; max: 3 W/m"},
+                            {title: "Вес", val: "0.124 кг"},
+                            {title: "Производитель", val: "Arlight"}
                         ]
                     thead
                         tr.productMore__characteristicsTableRow
-                            td.productMore__characteristicsTableColl Характеристики
+                            td.productMore__characteristicsTableColl Параметр
+                            td.productMore__characteristicsTableColl Значение
                     each i in tableItem
                         tr.productMore__characteristicsTableRow
                             td.productMore__characteristicsTableColl= i.title
