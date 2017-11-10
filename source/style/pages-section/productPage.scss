@@ -20,6 +20,9 @@
                 max-width: 49%;
                 height: 242px;
             }
+            &>.productMore__photo>img {
+                max-height: 90%;
+            }
         }
         @include w767 {
             display: block;
