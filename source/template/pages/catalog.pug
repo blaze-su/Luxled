@@ -140,13 +140,12 @@ block content
                                     +svgMix('accordionIcon', 'next')
                                 if key == 0
                                     .catalog__optionsItemList.catalog__optionsItemList--coll4
-                                        label.catalog__optionsItem.catalog__optionsItem--slider
+                                        label.catalog__optionsItem.catalog__optionsItem--slider.catalog__optionsItemSlider--price
                                             .catalog__optionsAmount
                                                 .catalog__optionsMin min
                                                     input(type="text" id="minCost").catalog__optionsMinVal
                                                 .catalog__optionsMax max
                                                     input(type="text" id="maxCost").catalog__optionsMaxVal
-                                            .catalog__optionsItemSlider.catalog__optionsItemSlider--price
                                         each m in o.subMenuOptions
                                             //- name and value задавать програмно backend
                                             label.catalog__optionsItem

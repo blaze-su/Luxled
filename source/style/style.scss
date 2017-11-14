@@ -141,20 +141,40 @@ body {
     margin: 20px 0;
 }
 
-.ui-slider-range {
-    height: 100%;
+.noUi-base {
+    display: block;
+    width: calc(100% - 16px);
+    height: 8px;
+    max-width: 100%;
+    position: relative;
     background-color: #adadad;
+    margin: 20px 0;
+    position: relative;
+    &:after {
+        display: block;
+        content: '';
+        width: 16px;
+        height: 8px;
+        position: absolute;
+        top: 0;
+        right: -16px;
+        background-color: inherit;
+    }
 }
 
-.ui-slider-handle {
+.noUi-origin {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+.noUi-handle {
     width: 16px;
     height: 16px;
     background-color: $indigo;
-    display: block;
-    position: absolute;
-    top: 50%;
+    position: relative;
     outline: none;
-    transform: translate(-50%, -50%);
+    transform: translateY(-25%);
 }
 
 .mobile {

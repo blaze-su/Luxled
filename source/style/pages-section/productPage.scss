@@ -95,6 +95,8 @@
             }
         }
         &Counter {
+            width: calc(100% - 1px);
+            margin: -0.5px auto auto;
             height: 110px !important;
             justify-content: space-between !important;
             background-color: $greyEF;
