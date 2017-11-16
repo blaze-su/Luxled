@@ -146,6 +146,15 @@ block content
                                                     input(type="text" id="minCost").catalog__optionsMinVal
                                                 .catalog__optionsMax max
                                                     input(type="text" id="maxCost").catalog__optionsMaxVal
+                                        label.catalog__optionsItem.catalog__optionsItem--slider.catalog__optionsItemSlider--price2
+                                            .catalog__optionsAmount
+                                                .catalog__optionsMin min
+                                                    input(type="text" id="minCost").catalog__optionsMinVal
+                                                .catalog__optionsMax max
+                                                    input(type="text" id="maxCost").catalog__optionsMaxVal
+                                        script.
+                                            catalogOptionRange('catalog__optionsItemSlider--price', 0, 10000, []);
+                                            catalogOptionRange('catalog__optionsItemSlider--price2', 0, 10000, []);
                                         each m in o.subMenuOptions
                                             //- name and value задавать програмно backend
                                             label.catalog__optionsItem

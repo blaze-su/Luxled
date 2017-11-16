@@ -229,6 +229,20 @@
                       </div>
                     </div>
                   </label>
+                  <label class="catalog__optionsItem catalog__optionsItem--slider catalog__optionsItemSlider--price2">
+                    <div class="catalog__optionsAmount">
+                      <div class="catalog__optionsMin">min
+                        <input class="catalog__optionsMinVal" type="text" id="minCost">
+                      </div>
+                      <div class="catalog__optionsMax">max
+                        <input class="catalog__optionsMaxVal" type="text" id="maxCost">
+                      </div>
+                    </div>
+                  </label>
+                  <script>
+                    catalogOptionRange('catalog__optionsItemSlider--price', 0, 10000, []);
+                    catalogOptionRange('catalog__optionsItemSlider--price2', 0, 10000, []);
+                  </script>
                   <label class="catalog__optionsItem">
                     <div class="catalog__optionsItemName">цвет цвет цвет цвет цвет </div>
                     <input type="checkbox" name="" value="цвет цвет цвет цвет цвет ">
