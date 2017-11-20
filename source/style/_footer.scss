@@ -52,6 +52,10 @@
         }
         &Item {
             margin-top: 20px;
+            & > .map {
+                font-size: 18px;
+                color: #000;
+            }
         }
     }
     &__signature {

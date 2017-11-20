@@ -28,8 +28,9 @@ $(document).ready(function() {
     mediaCenter(8, $('.footer__paymentLink'), $('.footer__paymentLinks'));
   }
   var mySwiper = new Swiper('.swiper2', {
+    autoplay: 2500,
     pagination: '.swiper-pagination',
-    paginationClickable: true,
+    paginationClickable: true,    
     paginationElement: 'li'
   });
   catalogFilterBox();
@@ -69,27 +70,27 @@ var catalogFilterBox = function() {
   $('.catalog__optionsTitleBox').on('click', function() {
     $('.catalog__optionFindProductBox').removeClass('catalog__optionFindProductBox--active');
   });
-  $('.catalog__optionsAmount').change(function () {
+  $('.catalog__optionsAmount input').change(function () {
     var top = $(this).offset().top - $('.catalog__optionItems').offset().top;
-    $('.catalog__optionFindProductBox').addClass('catalog__optionFindProductBox--active').css('top', top);
+    $('.catalog__optionFindProductBox').css('top', top);
   });
   $('.catalog__optionsItem').on('click', function() {
     if (!$(this).hasClass('catalog__optionsItem--slider')) {
       var top = $(this).offset().top - $('.catalog__optionItems').offset().top;
-      $('.catalog__optionFindProductBox').addClass('catalog__optionFindProductBox--active').css('top', top);
+      $('.catalog__optionFindProductBox').css('top', top);
     }
   });
   $('.noUi-base').on('click', function() {
     var top = $(this).offset().top - $('.catalog__option').offset().top;
-    $('.catalog__optionFindProductBox').addClass('catalog__optionFindProductBox--active').css('top', top);
+    $('.catalog__optionFindProductBox').css('top', top);
   });
   $('.noUi-handle').on('mousemove', function() {
     var _this = $(this);
     $(document).on('mouseup', function() {
       var top = _this.offset().top - $('.catalog__option').offset().top;
-      $('.catalog__optionFindProductBox').addClass('catalog__optionFindProductBox--active').css('top', top);
+      $('.catalog__optionFindProductBox').css('top', top);
       $('.noUi-handle').unbind('mousemove');
-      $(this).unbind('mouseup');
+      $(document).unbind('mouseup');
     });
   });
 };

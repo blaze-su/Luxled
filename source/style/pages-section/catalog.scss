@@ -371,6 +371,7 @@
                     &Photo {
                         margin: auto;
                         max-width: 220px;
+                        max-height: 100%;
                         transform: translateY(10px);
                         &Box {
                             max-height: 200px;
