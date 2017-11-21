@@ -30,9 +30,10 @@ $(document).ready(function() {
   var mySwiper = new Swiper('.swiper2', {
     autoplay: 2500,
     pagination: '.swiper-pagination',
-    paginationClickable: true,    
+    paginationClickable: true,
     paginationElement: 'li'
   });
+
   catalogFilterBox();
 });
 
@@ -70,28 +71,11 @@ var catalogFilterBox = function() {
   $('.catalog__optionsTitleBox').on('click', function() {
     $('.catalog__optionFindProductBox').removeClass('catalog__optionFindProductBox--active');
   });
-  $('.catalog__optionsAmount input').change(function () {
-    var top = $(this).offset().top - $('.catalog__optionItems').offset().top;
-    $('.catalog__optionFindProductBox').css('top', top);
-  });
   $('.catalog__optionsItem').on('click', function() {
     if (!$(this).hasClass('catalog__optionsItem--slider')) {
       var top = $(this).offset().top - $('.catalog__optionItems').offset().top;
       $('.catalog__optionFindProductBox').css('top', top);
     }
-  });
-  $('.noUi-base').on('click', function() {
-    var top = $(this).offset().top - $('.catalog__option').offset().top;
-    $('.catalog__optionFindProductBox').css('top', top);
-  });
-  $('.noUi-handle').on('mousemove', function() {
-    var _this = $(this);
-    $(document).on('mouseup', function() {
-      var top = _this.offset().top - $('.catalog__option').offset().top;
-      $('.catalog__optionFindProductBox').css('top', top);
-      $('.noUi-handle').unbind('mousemove');
-      $(document).unbind('mouseup');
-    });
   });
 };
 
@@ -101,12 +85,11 @@ var catalogOptionRange = function(id, start, end, array, currMin, currMax) {
   var slider = document.getElementsByClassName(id)[0];
   var minField = slider.getElementsByClassName('catalog__optionsMinVal')[0];
   var maxField = slider.getElementsByClassName('catalog__optionsMaxVal')[0];
+  var findBox = document.getElementsByClassName('catalog__optionFindProductBox')[0];
   var snapValues = [minField, maxField];
   var range = {},
     start = [],
     snap = false;
-
-
 
   if (array.length !== 0) {
     snap = true;
@@ -147,6 +130,10 @@ var catalogOptionRange = function(id, start, end, array, currMin, currMax) {
   });
   maxField.addEventListener('change', function() {
     slider.noUiSlider.set([null, this.value]);
+  });
+  slider.noUiSlider.on('set', function () {
+    var top = slider.offsetTop - document.getElementsByClassName('catalog__option')[0].offsetTop;
+    findBox.style.top = top + 'px';
   });
 };
 
